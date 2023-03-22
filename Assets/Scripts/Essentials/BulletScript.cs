@@ -14,9 +14,10 @@ public class BulletScript : MonoBehaviour
     }
 
     // Update is called once per frame
+    //if you want the gun follow the mouseobject, change Vector3.forward, otherwise use Vector3.right on bullets
     void Update()
     {
-        transform.Translate(Vector3.right*bulletSpeed*Time.deltaTime);
+        transform.Translate(Vector3.forward*bulletSpeed*Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)

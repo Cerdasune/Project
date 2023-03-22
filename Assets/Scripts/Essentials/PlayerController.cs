@@ -4,23 +4,47 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header ("Player movement")]
-    [Range(0.1f,30f)]
+    [Header("Gamemode")]
+    public bool twinstick = false;
+    public bool mouseaim = false;
+    public bool classic = false;
+   
+    
+
+    [Header("Player movement")]
+    [Range(0.1f, 30f)]
     public float playerSpeed = 10f;
     public float hor;
     public float ver;
     // public float dep;
 
-    
-    [Header ("Shooting")]
+
+    [Header("Shooting")]
     public GameObject bullet;
     public GameObject capsule;
+    public Transform gun;
+    public float fireRate = 0.5f;
+    public bool canFire = true;
+
+
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(twinstick)
+        {
+            gun.GetComponent<TwinstickAim>().enabled = true;
+            gun.GetComponent<GunScript>().enabled = false;
+        }
+
+        else if(classic)
+        {
+            gun.GetComponent<TwinstickAim>().enabled = false;
+            gun.GetComponent<GunScript>().enabled = false;
+
+        }
     }
 
     // Update is called once per frame
@@ -32,13 +56,14 @@ public class PlayerController : MonoBehaviour
 
 
         //This is for moving the player
-        transform.Translate(new Vector3(hor * playerSpeed * Time.deltaTime, ver * playerSpeed * Time.deltaTime,0));
+        transform.Translate(new Vector3(hor * playerSpeed * Time.deltaTime, ver * playerSpeed * Time.deltaTime, 0));
 
         //this is for shooting
 
-        if(Input.GetButtonDown("Jump"))
+        if (!twinstick && Input.GetButtonDown("Jump") && canFire)
         {
             Shoot();
+            //StartCoroutine("Shoot");
 
         }
 
@@ -52,13 +77,29 @@ public class PlayerController : MonoBehaviour
 
     public void Shoot()
     {
-        Instantiate(bullet, transform.position, transform.rotation);
+        Instantiate(bullet, gun.position, gun.rotation);
+
 
     }
+    
 
     public void Shootrapidly()
     {
-        Instantiate(capsule, transform.position, transform.rotation);
+        Instantiate(capsule, gun.position, gun.rotation);
 
     }
+
+    //this is if you want to control the time how often the player can shoot (either this or regular public void shoot)
+
+   public IEnumerator Shoottwinstick()
+    {
+        Instantiate(bullet, gun.position, gun.rotation);
+        canFire = false;
+        yield return new WaitForSeconds(fireRate);
+        canFire = true;
+    }
+   
+
+
+
 }
