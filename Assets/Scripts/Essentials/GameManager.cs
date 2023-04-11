@@ -8,22 +8,23 @@ public class GameManager : MonoBehaviour
 
     public int score = 0;
 
-    public GameObject gameManager;
+    public static GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         if(gameManager == null)
         {
-          gameManager = this.gameObject;
+            DontDestroyOnLoad(gameObject);
+            gameManager = this;
         }
 
-        else
+        else if(gameManager != this)
         {
-          
+            Destroy(gameObject);
         }
 
-        DontDestroyOnLoad(gameObject);
+        
     }
 
     // Update is called once per frame
@@ -32,10 +33,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void ChangeLevel()
-    {
-        SceneManager.LoadScene("MainGame");
-    }
     
       
 
