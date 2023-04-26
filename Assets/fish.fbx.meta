@@ -1,29 +1,9 @@
 fileFormatVersion: 2
-guid: 779ff088281dce84e881e3db8d02fb49
+guid: e1105592e03bb2a4a99238ba9a459ddb
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: cher
-    second: {fileID: 2100000, guid: d64a16c2eb740634fa05728067dd4387, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: creamtopping
-    second: {fileID: 2100000, guid: e7ade51275923d848bb01c2a50fa4b42, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: doe
-    second: {fileID: 2100000, guid: 93e42915797bbaa46b1141eab2b445c5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: jam
-    second: {fileID: 2100000, guid: 8284e62fc3f2cfe4ebfdca12b1130ece, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
