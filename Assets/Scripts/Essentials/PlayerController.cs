@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player movement")]
     [Range(0.1f, 30f)]
-    public float playerSpeed = 10f;
+    public float playerSpeed = 20f;
     public float hor;
     public float ver;
     // public float dep;
