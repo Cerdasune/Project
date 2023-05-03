@@ -26,7 +26,7 @@ public class HomingEnemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<Player>().TakingHit();
             Destroy(gameObject);
         }
     }

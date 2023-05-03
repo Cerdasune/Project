@@ -56,8 +56,18 @@ public class PlayerController : MonoBehaviour
 
 
         //This is for moving the player
-        transform.Translate(new Vector3(hor * playerSpeed * Time.deltaTime, ver * playerSpeed * Time.deltaTime, 0));
 
+        if (hor == 0)
+        {
+            transform.Translate(new Vector3( 1 * Time.deltaTime, ver * playerSpeed * Time.deltaTime, 0));
+
+        }
+
+        else 
+        {
+            transform.Translate(new Vector3(hor * playerSpeed * Time.deltaTime, ver * playerSpeed * Time.deltaTime, 0));
+
+        }
         //this is for shooting
 
         if (!twinstick && Input.GetButtonDown("Jump") && canFire)

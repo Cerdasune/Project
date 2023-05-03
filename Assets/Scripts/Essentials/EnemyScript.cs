@@ -11,20 +11,20 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 10f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.left * enemySpeed * Time.deltaTime);
+        transform.Translate(Vector3.back * enemySpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<Player>().TakingHit();
             Destroy(gameObject);
             
 
