@@ -12,7 +12,7 @@ public class CollisionExample : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "Obstacle")
+        if(other.gameObject.tag == "Enemy")
         {
             StartCoroutine(HitStop());
 
@@ -25,8 +25,8 @@ public class CollisionExample : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
         Time.timeScale = 1f;
         Instantiate(explosion, transform.position, transform.rotation);
-        cameraAnim.SetTrigger("Shake");
-        GameObject.Find("Panda").SetActive(false);
+        //cameraAnim.SetTrigger("Shake");
+        GameObject.Find("Player").SetActive(false);
         yield return new WaitForSeconds(0.5f);
         retrybutton.SetActive(true);
         backbutton.SetActive(true);

@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] enemyFields;
     public GameObject player;
+    public GameObject[] trees;
 
     public Animator fadescreen;
     public float transitionTime = 3f;
@@ -24,10 +25,10 @@ public class GameManager : MonoBehaviour
 
  
     // Start is called before the first frame update
-    void Start()
+    void Start() 
     {
         hiScore = PlayerPrefs.GetInt("HiScore");
-        hiScoreText.text = "Hi Score" + hiScore.ToString();
+       hiScoreText.text = "Hi Score" + hiScore.ToString();
 
         if (gameManager == null)
         {
@@ -84,8 +85,14 @@ public class GameManager : MonoBehaviour
 
     public void SpawnEnemyFields()
     {
-        int rnd = Random.Range(0, 5);
-        Instantiate(enemyFields[rnd], new Vector3(player.transform.position.x, player.transform.position.y + 15, player.transform.position.z), player.transform.rotation);
+        int rnd = Random.Range(0,5);
+        Instantiate(enemyFields[rnd], new Vector3(player.transform.position.x+70, player.transform.position.y, player.transform.position.z), player.transform.rotation);
+    }
+
+    public void Spawntrees()
+    {
+        int rnd = Random.Range(0,1);
+        Instantiate(trees[rnd], new Vector3(player.transform.position.x + 30, player.transform.position.y, player.transform.position.z), player.transform.rotation);
     }
 
     public void ClearData() //doesn't do anything, since it needs Clear data-button to work.

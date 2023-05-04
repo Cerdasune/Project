@@ -6,7 +6,7 @@ public class CollectSpawner : MonoBehaviour
 {
     public GameObject[] movingcollectable;
     public float spawnTimer = 3;
-
+     
 
     // Start is called before the first frame update
     void Start()

@@ -25,15 +25,15 @@ public class Player : MonoBehaviour
 
         if (_currenthealth <= 0)
         {
-           // Instantiate(_deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
-            Destroy(gameObject);
+           Instantiate(_deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
+           Destroy(gameObject);
 
         }
 
         else
         {
             _healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
-           // Instantiate(_hitEffect, transform.position, Quaternion.identity);
+           Instantiate(_hitEffect, transform.position, Quaternion.identity);
 
         }
     }
