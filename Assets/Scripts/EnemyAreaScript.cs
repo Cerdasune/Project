@@ -8,7 +8,9 @@ public class EnemyAreaScript : MonoBehaviour
 
     public GameManager gm;
 
-    public GameObject[] collectable; 
+    public GameObject[] collectable;
+
+    public GameObject[] treeSpawner;
 
     // Start is called before the first frame update
     private void Start()
@@ -40,6 +42,15 @@ public class EnemyAreaScript : MonoBehaviour
         if(other.gameObject.name == "Player")
         {
             gm.SpawnEnemyFields();
+
+        }
+    }
+
+    private void OnTrigger(Collider other) //??
+    {
+        if (other.gameObject.name == "Player")
+        {
+            gm.Spawntrees();
 
         }
     }

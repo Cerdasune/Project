@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator Loadlevel(int levelToLoad)
     {
         fadescreen.SetTrigger("FadeOut");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(levelToLoad);
 
     }

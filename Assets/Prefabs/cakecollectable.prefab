@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2158236365314076909}
   - component: {fileID: 4185937266233885735}
   - component: {fileID: 5197886241623594199}
+  - component: {fileID: 5816194865209631155}
   m_Layer: 0
   m_Name: cakecollectable
   m_TagString: collectable
@@ -100,3 +101,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1.5989373, z: 2}
   m_Center: {x: 0, y: -0.47495255, z: 0}
+--- !u!54 &5816194865209631155
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2384536928136422898}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
