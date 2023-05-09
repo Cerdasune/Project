@@ -35,6 +35,13 @@ public class EnemyAreaScript : MonoBehaviour
                 enemySpawn[i].SetActive(true);
 
             }
+
+        if (other.gameObject.name == "Player")
+
+            for (int i = 0; i < enemySpawn.Length; i++)
+            {
+                treeSpawner[i].SetActive(true);
+            }
     }
 
     private void OnTriggerExit(Collider other)
@@ -42,16 +49,8 @@ public class EnemyAreaScript : MonoBehaviour
         if(other.gameObject.name == "Player")
         {
             gm.SpawnEnemyFields();
-
-        }
-    }
-
-    private void OnTrigger(Collider other) //??
-    {
-        if (other.gameObject.name == "Player")
-        {
             gm.Spawntrees();
-
         }
     }
+
 }
