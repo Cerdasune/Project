@@ -23,7 +23,7 @@ public class CameraExample : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.LookAt(target);
+        transform.LookAt(target);
         transform.position = Vector3.Lerp(transform.position, target.position, delay * Time.deltaTime);
 
         if(Input.GetKeyDown(KeyCode.H))

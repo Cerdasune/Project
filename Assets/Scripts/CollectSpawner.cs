@@ -23,7 +23,7 @@ public class CollectSpawner : MonoBehaviour
     void Spawn()
     {
         Instantiate(movingcollectable[Random.Range(0,3)], transform.position, transform.rotation);
-        spawnTimer = Random.Range(5, 10);
+        spawnTimer = Random.Range(10, 15);
         Invoke("Spawn", spawnTimer);
 
     }

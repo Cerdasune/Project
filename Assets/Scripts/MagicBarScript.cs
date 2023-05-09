@@ -19,14 +19,25 @@ public class MagicBarScript : MonoBehaviour
 
     }
 
-    public void UpdateMagichbar(float maxHealth, float currentHealth)
+    public void UpdateMagicbar(float maxAmount, float currentAmount)
     {
-        _target = currentHealth / maxHealth;
+        _target = currentAmount / maxAmount;
     }
 
     void Update()
     {
         transform.rotation = Quaternion.LookRotation(transform.position - _cam.transform.position);
         _Magicbarsprite.fillAmount = Mathf.MoveTowards(_Magicbarsprite.fillAmount, _target, _IncreaseSpeed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "cakecollectable")
+
+            for (int i = 0; i < _Magicbarsprite.fillAmount; i++)
+            {
+                _Magicbarsprite.fillAmount = Mathf.MoveTowards(_Magicbarsprite.fillAmount, _target, _IncreaseSpeed * Time.deltaTime);
+
+            }
     }
 }

@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     [Header("Shooting")]
     public GameObject bullet;
     public GameObject capsule;
+    public GameObject lazer;
     public Transform gun;
     public float fireRate = 0.5f;
     public bool canFire = true;
@@ -83,6 +84,12 @@ public class PlayerController : MonoBehaviour
 
         }
 
+        if (Input.GetButton("Fire2"))
+        {
+            Shootlazer();
+
+        }
+
     }
 
     public void Shoot()
@@ -99,9 +106,15 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void Shootlazer()
+    {
+        Instantiate(lazer, gun.position, gun.rotation);
+
+    }
+
     //this is if you want to control the time how often the player can shoot (either this or regular public void shoot)
 
-   public IEnumerator Shoottwinstick()
+    public IEnumerator Shoottwinstick()
     {
         Instantiate(bullet, gun.position, gun.rotation);
         canFire = false;
