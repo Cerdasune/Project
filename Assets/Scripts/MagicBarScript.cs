@@ -10,7 +10,7 @@ public class MagicBarScript : MonoBehaviour
 
     public GameObject Cakemagic;
 
-    private float _target = 1;
+    private float _target = 0;
     private Camera _cam;
 
     void Start()

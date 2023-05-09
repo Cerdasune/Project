@@ -8,7 +8,11 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject _deathEffect, _hitEffect;
     private float _currenthealth;
 
+    [SerializeField] private float _maxmagic = 10;
+    private float _currentmagic;
+
     [SerializeField] private HealthBar _healthbar;
+    [SerializeField] private MagicBarScript _magicbar; 
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +40,13 @@ public class Player : MonoBehaviour
            Instantiate(_hitEffect, transform.position, Quaternion.identity);
 
         }
+    }
+
+    public void MagicUp()
+    {
+        _magicbar.UpdateMagicbar(-_maxmagic, _currentmagic);
+
+
     }
         
 }
