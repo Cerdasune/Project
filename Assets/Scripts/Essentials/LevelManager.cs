@@ -16,12 +16,6 @@ public class LevelManager : MonoBehaviour
         fadeScreen = GameObject.Find("FadeScreen").GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ChangeLevel(int levelNumber)
     {
         pause.paused = false;

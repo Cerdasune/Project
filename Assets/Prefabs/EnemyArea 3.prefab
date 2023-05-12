@@ -122,7 +122,7 @@ Transform:
   m_GameObject: {fileID: 8085184651565814922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 32.5, y: 2.5, z: -0.0021514893}
-  m_LocalScale: {x: 26.914064, y: 17.5, z: 50}
+  m_LocalScale: {x: 45.331722, y: 27.139385, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6071789654375775179}
@@ -212,3 +212,5 @@ MonoBehaviour:
   gm: {fileID: 0}
   collectable:
   - {fileID: 2384536928136422898, guid: e008512c919208f499888ef858b38e6d, type: 3}
+  treeSpawner: []
+  spawnTimer: 6

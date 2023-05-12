@@ -104,6 +104,19 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void GameOver()
+    {
+        StartCoroutine(Loadlevel(2));
+
+    }
+
+    public void StageClear()
+    {
+        StartCoroutine(Loadlevel(3));
+
+    }
+
+
     public void QuitGame()
     {
         Application.Quit();

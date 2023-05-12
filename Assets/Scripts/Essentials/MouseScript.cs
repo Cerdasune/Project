@@ -7,17 +7,6 @@ public class MouseScript : MonoBehaviour
 
     public LayerMask layerMask;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     //this code is for mouse aiming
     private void FixedUpdate()

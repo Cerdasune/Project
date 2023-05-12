@@ -9,7 +9,7 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private float _reduceSpeed =2;
     private float _target =1;
     private Camera _cam;
-
+    public GameObject BreadHP;
     void Start()
     {
         _cam = Camera.main;

@@ -2,9 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class SceneManagerScript : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject InventoryMenu;
+
+    public bool paused = false;
+
+    public Animator UIAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -23,4 +29,26 @@ public class SceneManagerScript : MonoBehaviour
         pauseMenu.SetActive(true);
 
     }
+
+    public void Inventory()
+    { 
+        InventoryMenu.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void Openwindow()
+    {
+
+        UIAnimator.SetTrigger("Open");
+
+    }
+
+    public void Closewindow()
+    {
+
+        UIAnimator.SetTrigger("Close");
+
+    }
+
 }
+

@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] private HealthBar _healthbar;
     [SerializeField] private MagicBarScript _magicbar;
     public GameObject gameOverScreen;
+    public GameManager gm;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
            Instantiate(_deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
            Destroy(gameObject);
            gameOverScreen.SetActive(true);
+           
 
         }
 
@@ -47,8 +49,11 @@ public class Player : MonoBehaviour
     public void MagicUp()
     {
         _magicbar.UpdateMagicbar(-_maxmagic, _currentmagic);
-
-
     }
-        
+
+    public void HealthUp()
+    {     
+        _healthbar.UpdateHealthBar(_maxhealth, _currenthealth);     
+    }
+
 }
