@@ -45,7 +45,7 @@ public class SceneManagerScript : MonoBehaviour
 
     public void Closewindow()
     {
-
+        pauseMenu.SetActive(false);
         UIAnimator.SetTrigger("Close");
 
     }
