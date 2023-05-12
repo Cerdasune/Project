@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator Loadlevel(int levelToLoad)
     {
-        fadescreen.SetTrigger("FadeOut");
+        fadescreen.SetTrigger("ChangeLevel");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(levelToLoad);
 

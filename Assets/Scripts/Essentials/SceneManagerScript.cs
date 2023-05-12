@@ -34,20 +34,23 @@ public class SceneManagerScript : MonoBehaviour
     { 
         InventoryMenu.SetActive(true);
         Time.timeScale = 0f;
+        
     }
 
     public void Openwindow()
     {
-
+        Time.timeScale = 0f;
         UIAnimator.SetTrigger("Open");
 
     }
 
     public void Closewindow()
     {
+        
         pauseMenu.SetActive(false);
+        InventoryMenu.SetActive(false);
         UIAnimator.SetTrigger("Close");
-
+        Time.timeScale = 1f;
     }
 
 }
