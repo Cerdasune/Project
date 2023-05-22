@@ -9,6 +9,10 @@ TagManager:
   - collectable
   - Obstacle
   - Inventory
+  - HealthItem
+  - MagicItem
+  - SpeedItem
+  - LifeItem
   layers:
   - Default
   - TransparentFX

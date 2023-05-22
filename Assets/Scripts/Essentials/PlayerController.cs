@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public float hor;
     public float ver;
     // public float dep;
+    public float rotation;
 
 
     [Header("Shooting")]
@@ -69,6 +70,8 @@ public class PlayerController : MonoBehaviour
             transform.Translate(new Vector3(hor * playerSpeed * Time.deltaTime, ver * playerSpeed * Time.deltaTime, 0));
 
         }
+
+        
         //this is for shooting
 
         if (!twinstick && Input.GetButtonDown("Jump") && canFire)

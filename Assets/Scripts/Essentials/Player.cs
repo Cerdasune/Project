@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float _maxmagic = 10;
     private float _currentmagic;
 
+    private float _currentScore = 0;
+
     [SerializeField] private HealthBar _healthbar;
     [SerializeField] private MagicBarScript _magicbar;
     public GameObject gameOverScreen;
@@ -37,8 +39,8 @@ public class Player : MonoBehaviour
     {
         PlayerSpeed = originalSpeed;
         _currenthealth = _maxhealth;
-
         _healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
+        _currentScore = 0;
     }
 
     // Update is called once per frame
@@ -63,29 +65,35 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "cakecollectable")
+        if (other.gameObject.tag == "MagicItem")
         {
+            _magicbar.UpdateMagicbar(-_maxmagic, _currentmagic);
+            gm.score =+ 10;
             print("I got magic");
-            MagicUp.SetActive(true);
         }
 
-        if (other.gameObject.name == "Drinkcollectable")
+        if (other.gameObject.name == "SpeedItem")
         {
+            originalSpeed = maxSpeed;
+            gm.score =+ 15;
             print("I got speed");          
         }
 
-        if (other.gameObject.name == "breadcollectable")
+        if (other.gameObject.tag == "HealthItem")
         {
-            print("I got health");     
+            print("I got health");
+            gm.score =+ 20;
+            _healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
         }
 
-        if (other.gameObject.name == "heartcollectable")
+        if (other.gameObject.name == "LifeItem")
         {
+            gm.score =+ 40;
             print("I got life");  
         }
     }
 
-    public void MagicUp()
+   public void MagicUp()
     {
         _magicbar.UpdateMagicbar(-_maxmagic, _currentmagic);
     }

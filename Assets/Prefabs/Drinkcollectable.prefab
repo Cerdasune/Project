@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3664597986145831353}
   m_Layer: 8
   m_Name: Drinkcollectable
-  m_TagString: collectable
+  m_TagString: SpeedItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,4 +130,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c362b3817a7251c4086c4745de8d752d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
+  Player: {fileID: 0}
