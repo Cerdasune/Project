@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5197886241623594199}
   - component: {fileID: 5816194865209631155}
   - component: {fileID: 7517230261251731028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cakecollectable
   m_TagString: collectable
   m_Icon: {fileID: 0}
@@ -130,3 +130,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c362b3817a7251c4086c4745de8d752d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}

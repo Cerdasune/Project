@@ -8,6 +8,7 @@ TagManager:
   - Enemybullet
   - collectable
   - Obstacle
+  - Inventory
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - MouseObject
   - PostProcess
-  - 
+  - Collect+Score
   - 
   - 
   - 

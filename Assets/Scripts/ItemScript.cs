@@ -3,27 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemScript : MonoBehaviour
-{ 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+{
+    public GameObject Player;
 
     public void OnTriggerEnter(Collider other)
     {
        if(other.gameObject.name == "Player")
         {
             other.gameObject.GetComponent<Player>().MagicUp();
+            other.gameObject.GetComponent<Player>().Collectcake();
             print("kakku");
             Destroy(gameObject);
         }
+
+        if (other.gameObject.name == "Player")
+        {
+            other.gameObject.GetComponent<Player>().HealthUp();
+            other.gameObject.GetComponent<Player>().Collectbread();
+            print("leipä");
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.name == "Player")
+        {
+            other.gameObject.GetComponent<Player>().SpeedUp();
+            other.gameObject.GetComponent<Player>().Collectdrink();
+            print("juoma");
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.name == "Player")
+        {
+            other.gameObject.GetComponent<Player>().NewLife();
+            other.gameObject.GetComponent<Player>().Collectheart();
+            print("sydän");
+            Destroy(gameObject);
+        }
+
+       
     }
+
 }

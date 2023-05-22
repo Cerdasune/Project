@@ -3,14 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
 
-    public int score = 0;
-    public static int hiScore = 10;
     public TextMeshProUGUI scoreText;
+    public int score = 0;
+
+    public GameObject Score;
+    public GameObject youWin;
+
     public TextMeshProUGUI hiScoreText;
+
+    public int maxScore;
+
+    public static int hiScore;
 
     public AudioSource titleMusic;
 
@@ -27,7 +35,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start() 
     {
-        hiScore = PlayerPrefs.GetInt("HiScore");
+       score = 0;
+       hiScore = PlayerPrefs.GetInt("HiScore");
        hiScoreText.text = "Hi Score" + hiScore.ToString();
 
         if (gameManager == null)
@@ -41,6 +50,36 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
  
+    }
+
+ 
+
+    //Scoresystem
+
+    public void AddScore( int newScore)
+    {
+        score += newScore;
+
+    }
+
+    public void UpdateScore()
+    {
+        scoreText.text = "Score 0" + score;
+    }
+
+    void Update()
+    {
+       
+
+        UpdateScore();
+
+        if(score == maxScore)
+        {
+            Score.SetActive(false);
+            youWin.SetActive(true);
+            StartCoroutine(Loadlevel(2));
+
+        }
     }
 
     public void StartGame()
@@ -69,8 +108,8 @@ public class GameManager : MonoBehaviour
 
     public void Scorecounterinscreen()
     {
-        score += 10;
-        hiScoreText.text = "Score" + score.ToString();
+        //score += 10;
+        //hiScoreText.text = "Score" + score.ToString();
 
         if(score > hiScore)
         {
@@ -106,16 +145,9 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        StartCoroutine(Loadlevel(2));
+        
 
     }
-
-    public void StageClear()
-    {
-        StartCoroutine(Loadlevel(3));
-
-    }
-
 
     public void QuitGame()
     {
