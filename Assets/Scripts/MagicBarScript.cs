@@ -19,9 +19,13 @@ public class MagicBarScript : MonoBehaviour
 
     }
 
-    public void UpdateMagicbar(float maxAmount, float currentAmount)
+    public void UpdateMagicbar(float magic)
     {
-        _target = currentAmount / maxAmount;
+        if(_target <= 1)
+        {
+            print("Fill Magic");
+            _target = _target + magic;
+        }
     }
 
     void Update()
@@ -30,6 +34,7 @@ public class MagicBarScript : MonoBehaviour
         _Magicbarsprite.fillAmount = Mathf.MoveTowards(_Magicbarsprite.fillAmount, _target, _IncreaseSpeed * Time.deltaTime);
     }
 
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "cakecollectable")
@@ -40,4 +45,5 @@ public class MagicBarScript : MonoBehaviour
 
             }
     }
+    */
 }

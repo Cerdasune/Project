@@ -10,8 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject _deathEffect, _hitEffect;
     private float _currenthealth;
 
-    [SerializeField] private float _maxmagic = 10;
-    private float _currentmagic;
+    [SerializeField] private float _magicplus = 10;
+    private float _currentmagic = 0f;
 
     private float _currentScore = 0;
 
@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
         PlayerSpeed = originalSpeed;
         _currenthealth = _maxhealth;
         _healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
+        _magicbar.UpdateMagicbar(_currentmagic);
         _currentScore = 0;
     }
 
@@ -67,7 +68,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "MagicItem")
         {
-            _magicbar.UpdateMagicbar(-_maxmagic, _currentmagic);
+            _magicbar.UpdateMagicbar(_magicplus);
             gm.score =+ 10;
             print("I got magic");
         }
@@ -93,10 +94,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    /*
    public void MagicUp()
     {
         _magicbar.UpdateMagicbar(-_maxmagic, _currentmagic);
     }
+    */
 
     public void HealthUp()
     {     

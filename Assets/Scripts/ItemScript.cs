@@ -10,7 +10,7 @@ public class ItemScript : MonoBehaviour
     {
        if(other.gameObject.name == "Player")
         {
-            other.gameObject.GetComponent<Player>().MagicUp();
+
             other.gameObject.GetComponent<Player>().Collectcake();
             print("kakku");
             Destroy(gameObject);
