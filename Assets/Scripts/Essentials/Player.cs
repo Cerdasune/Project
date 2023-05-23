@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
             print("I got magic");
         }
 
-        if (other.gameObject.name == "SpeedItem")
+        if (other.gameObject.tag == "SpeedItem")
         {
             originalSpeed = maxSpeed;
             gm.score =+ 15;
@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
             _healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
         }
 
-        if (other.gameObject.name == "LifeItem")
+        if (other.gameObject.tag == "LifeItem")
         {
             gm.score =+ 40;
             print("I got life");  

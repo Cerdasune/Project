@@ -7,6 +7,11 @@ public class EnemyArea : MonoBehaviour
     public GameObject[] enemyspawner;
     public GameManager gm;
 
+    private void Start()
+    {
+        gm = GameObject.Find("GM").GetComponent<GameManager>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")

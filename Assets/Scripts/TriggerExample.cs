@@ -13,7 +13,7 @@ public class TriggerExample : MonoBehaviour
         {
             Destroy(other.gameObject);
             gm.Scorecounterinscreen();
-            Instantiate(movingcollectable[Random.Range(0, 3)], new Vector3(transform.position.x+12,transform.position.y,transform.position.z), transform.rotation);
+            Instantiate(movingcollectable[Random.Range(0, 3)], new Vector3(transform.position.x+12,transform.position.y+3,transform.position.z), transform.rotation);
 
         }
     }
