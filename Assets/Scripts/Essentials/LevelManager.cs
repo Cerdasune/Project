@@ -18,7 +18,7 @@ public class LevelManager : MonoBehaviour
 
     public void ChangeLevel(int levelNumber)
     {
-        pause.paused = false;
+        
         fadeScreen.SetTrigger("ChangeLevel");
         StartCoroutine(NewLevel(levelNumber));
     }

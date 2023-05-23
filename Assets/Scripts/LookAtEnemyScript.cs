@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScript : MonoBehaviour
+public class LookAtEnemyScript : MonoBehaviour
 {
     private PlayerController player;
 
@@ -17,7 +17,7 @@ public class EnemyScript : MonoBehaviour
     public float timer;
     public float timeToTurn = 3f;
 
-  
+
     // Use this for initialization
     void Start()
     {
@@ -26,12 +26,12 @@ public class EnemyScript : MonoBehaviour
 
         if (dir == 0)
         {
-            speed = -speed;           
+            speed = -speed;
         }
 
         else
         {
-            speed = 1f;           
+            speed = 1f;
         }
     }
 
@@ -43,7 +43,7 @@ public class EnemyScript : MonoBehaviour
         transform.LookAt(lookAt);
 
         //timer += Time.deltaTime;
-        transform.position = transform.position + Vector3.right * speed * Time.deltaTime;
+        //transform.position = transform.position + Vector3.right * speed * Time.deltaTime;
 
         if (timer > timeToTurn)
         {
@@ -54,14 +54,14 @@ public class EnemyScript : MonoBehaviour
 
     }
 
-   private void OnTriggerEnter(Collider other)
-   {
-       if (other.gameObject.CompareTag("Player"))
-       {
-           other.gameObject.GetComponent<Player>().TakingHit();
-           Destroy(gameObject);
-       }
-   }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<Player>().TakingHit();
+            Destroy(gameObject);
+        }
+    }
 
 
     private void OnTriggerExit(Collider other)
@@ -71,12 +71,13 @@ public class EnemyScript : MonoBehaviour
 
 }
 
-  
 
 
 
 
 
-   
+
+
+
 
 

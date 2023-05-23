@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] enemyFields;
     public GameObject player;
-    public GameObject[] trees;
+   
 
     public Animator fadescreen;
     public float transitionTime = 3f;
@@ -125,13 +125,7 @@ public class GameManager : MonoBehaviour
     public void SpawnEnemyFields()
     {
         int rnd = Random.Range(0,5);
-        Instantiate(enemyFields[rnd], new Vector3(player.transform.position.x+70, player.transform.position.y, player.transform.position.z), player.transform.rotation);
-    }
-
-    public void Spawntrees()
-    {
-        int rnd = Random.Range(0,1);
-        Instantiate(trees[rnd], new Vector3(player.transform.position.x + 30, player.transform.position.y, player.transform.position.z), player.transform.rotation);
+        Instantiate(enemyFields[rnd], new Vector3(player.transform.position.x+30, player.transform.position.y, player.transform.position.z), player.transform.rotation);
     }
 
     public void ClearData() //doesn't do anything, since it needs Clear data-button to work.
