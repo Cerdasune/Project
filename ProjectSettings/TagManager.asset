@@ -13,6 +13,7 @@ TagManager:
   - MagicItem
   - SpeedItem
   - LifeItem
+  - StageWall
   layers:
   - Default
   - TransparentFX

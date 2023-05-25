@@ -24,12 +24,16 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] enemyFields;
     public GameObject player;
+    public GameObject menuButton;
+    public GameObject retryButton;
    
 
     public Animator fadescreen;
     public float transitionTime = 3f;
 
     public static GameManager gameManager;
+
+    public GameObject winWall;
 
  
     // Start is called before the first frame update
@@ -76,8 +80,8 @@ public class GameManager : MonoBehaviour
         if(score == maxScore)
         {
             Score.SetActive(false);
-            youWin.SetActive(true);
-            StartCoroutine(Loadlevel(2));
+            //youWin.SetActive(true);
+            //StartCoroutine(Loadlevel(2));
 
         }
     }
@@ -136,6 +140,27 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.Save();
 
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Obstacle")
+        {
+            Destroy(other.gameObject);
+
+        }
+    }
+
+    public void StageClear()
+    {
+        youWin.SetActive(true);
+        Time.timeScale = 0f;
+        GameObject.Find("Player").SetActive(false);
+        print("I found player");
+        retryButton.SetActive(true);
+        menuButton.SetActive(true);
+        Destroy(gameObject);
+    }
+
 
     public void GameOver()
     {

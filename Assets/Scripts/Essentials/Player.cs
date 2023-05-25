@@ -92,6 +92,13 @@ public class Player : MonoBehaviour
             gm.score =+ 40;
             print("I got life");  
         }
+
+        if (other.gameObject.tag == "StageWall")
+        {
+            gm.StageClear();
+            
+        }
+           
     }
 
     /*
@@ -160,4 +167,5 @@ public class Player : MonoBehaviour
     {
         heartsCollected++;
     }
+
 }
