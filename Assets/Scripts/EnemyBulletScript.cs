@@ -17,6 +17,7 @@ public class EnemyBulletScript : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        Destroy(gameObject, 5f);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,9 +25,8 @@ public class EnemyBulletScript : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
 
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<Player>().TakingHit();
             Destroy(gameObject);
-
         }
     }
 }

@@ -112,14 +112,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086fc2f63e239dd4abd1064bdc5e9864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visionPoint: {fileID: 0}
   Player: {fileID: 0}
   visionAngle: 1
   visionDistance: 1
   moveSpeed: 1
   chaseDistance: 2
-  speed: 20
-  timer: 0
-  timeToTurn: 3
 --- !u!1001 &1785727366977132764
 PrefabInstance:
   m_ObjectHideFlags: 0

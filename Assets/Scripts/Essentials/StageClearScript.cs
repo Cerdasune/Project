@@ -17,7 +17,7 @@ public class StageClearScript : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.T))
         {
-            gm.AddScore(1);
+            //gm.AddScore(1);
 
         }
     }

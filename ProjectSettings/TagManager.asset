@@ -14,6 +14,7 @@ TagManager:
   - SpeedItem
   - LifeItem
   - StageWall
+  - EnemySpawn
   layers:
   - Default
   - TransparentFX

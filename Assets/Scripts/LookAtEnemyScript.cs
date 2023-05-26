@@ -8,49 +8,30 @@ public class LookAtEnemyScript : MonoBehaviour
 
     public Transform Player;
 
-    public float visionAngle = 1f;
-    public float visionDistance = 1f;
-    public float moveSpeed = 1f;
-    public float chaseDistance = 2f;
+    public float visionAngle = 10f;
+    public float visionDistance = 10f;
+    public float moveSpeed = 10f;
+    public float chaseDistance = 20f;
 
-    public float speed = 1f;
-    public float timer;
+    public float speed = 10f;
     public float timeToTurn = 3f;
+
 
 
     // Use this for initialization
     void Start()
     {
-        int dir = Random.Range(0, 2);
-        print(dir);
-
-        if (dir == 0)
-        {
-            speed = -speed;
-        }
-
-        else
-        {
-            speed = 1f;
-        }
+        player = GameObject.FindObjectOfType<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         Vector3 lookAt = Player.position;
         lookAt.y = transform.position.y;
         transform.LookAt(lookAt);
-
-        //timer += Time.deltaTime;
-        //transform.position = transform.position + Vector3.right * speed * Time.deltaTime;
-
-        if (timer > timeToTurn)
-        {
-            speed = -speed;
-            timer = 1f;
-        }
-
+        transform.position = transform.position + Vector3.right * speed * Time.deltaTime;
 
     }
 
@@ -61,12 +42,6 @@ public class LookAtEnemyScript : MonoBehaviour
             other.gameObject.GetComponent<Player>().TakingHit();
             Destroy(gameObject);
         }
-    }
-
-
-    private void OnTriggerExit(Collider other)
-    {
-        speed = -speed;
     }
 
 }

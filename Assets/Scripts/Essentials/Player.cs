@@ -6,9 +6,11 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float _maxhealth = 7;
+    [SerializeField] private float _maxhealth = 10;
+    [SerializeField] private float _currenthealth;
+    [SerializeField] private float _increaseHealth = 5;
     [SerializeField] private GameObject _deathEffect, _hitEffect;
-    private float _currenthealth;
+   
 
     [SerializeField] private float _magicplus = 10;
     private float _currentmagic = 0f;
@@ -34,12 +36,14 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI caketext;
     public TextMeshProUGUI hearttext;
 
+    public AudioSource itemSound;
+
     // Start is called before the first frame update
     void Start()
     {
         PlayerSpeed = originalSpeed;
         _currenthealth = _maxhealth;
-        _healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
+        //_healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
         _magicbar.UpdateMagicbar(_currentmagic);
         _currentScore = 0;
     }
@@ -59,7 +63,7 @@ public class Player : MonoBehaviour
         else
         {
             _healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
-           Instantiate(_hitEffect, transform.position, Quaternion.identity);
+            Instantiate(_hitEffect, transform.position, Quaternion.identity);
 
         }
     }
@@ -69,28 +73,33 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "MagicItem")
         {
             _magicbar.UpdateMagicbar(_magicplus);
-            gm.score =+ 10;
+            gm.score = gm.score+ 10;
             print("I got magic");
+            itemSound.Play();
         }
 
         if (other.gameObject.tag == "SpeedItem")
         {
+            _increaseHealth = _currenthealth + 5;
             originalSpeed = maxSpeed;
-            gm.score =+ 15;
-            print("I got speed");          
+            gm.score = gm.score + 15;
+            print("I got speed");
+           itemSound.Play();
         }
 
         if (other.gameObject.tag == "HealthItem")
         {
             print("I got health");
-            gm.score =+ 20;
-            _healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
+            gm.score = gm.score + 20;
+            itemSound.Play();
+            
         }
 
         if (other.gameObject.tag == "LifeItem")
         {
-            gm.score =+ 40;
-            print("I got life");  
+            gm.score = gm.score+ 40;
+            print("I got life");
+            itemSound.Play();
         }
 
         if (other.gameObject.tag == "StageWall")
@@ -109,8 +118,8 @@ public class Player : MonoBehaviour
     */
 
     public void HealthUp()
-    {     
-        _healthbar.UpdateHealthBar(_maxhealth, _currenthealth);     
+    {
+        _increaseHealth = _currenthealth + 5;
     }
 
     public void SpeedUp()
@@ -122,6 +131,7 @@ public class Player : MonoBehaviour
     {
         
     }
+
 
     void Update()
     {
@@ -167,5 +177,7 @@ public class Player : MonoBehaviour
     {
         heartsCollected++;
     }
+
+ 
 
 }

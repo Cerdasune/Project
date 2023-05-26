@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class MagicBarScript : MonoBehaviour
 {
     [SerializeField] private Image _Magicbarsprite;
-    [SerializeField] private float _IncreaseSpeed = 2;
+    [SerializeField] private float _IncreaseSpeed = 4;
 
     public GameObject Cakemagic;
+    public GameObject Beam;
 
     private float _target = 0;
     private Camera _cam;
@@ -25,6 +26,11 @@ public class MagicBarScript : MonoBehaviour
         {
             print("Fill Magic");
             _target = _target + magic;
+        }
+
+        if(_target == 1)
+        {
+            gameObject.GetComponent<PlayerController>().Shootlazer();
         }
     }
 

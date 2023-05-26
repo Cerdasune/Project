@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject winWall;
 
+   
+
  
     // Start is called before the first frame update
     void Start() 
@@ -141,14 +143,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Obstacle")
-        {
-            Destroy(other.gameObject);
-
-        }
-    }
+  
 
     public void StageClear()
     {
