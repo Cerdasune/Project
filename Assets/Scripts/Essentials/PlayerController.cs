@@ -75,7 +75,8 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        
+        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, -15f, 15f), transform.position.z);
+
         //this is for shooting
 
         if (!twinstick && Input.GetButtonDown("Jump") && canFire)
