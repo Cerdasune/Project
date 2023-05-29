@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.289
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0007820109, g: 0.012461628, b: 0.036032014, a: 0.289}
+  m_IndirectSpecularColor: {r: 0.00078449165, g: 0.012436842, b: 0.03602818, a: 0.289}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5543,10 +5543,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxhealth: 10
   _currenthealth: 0
-  _increaseHealth: 5
+  _healthIncrease: 2
   _deathEffect: {fileID: 3077030611160169112, guid: 2594ae7910fda264db04cc6259223c10, type: 3}
   _hitEffect: {fileID: 8174009041853797911, guid: c67eb6028f7e1cc44b2af30f469019f5, type: 3}
   _magicplus: 0.5
+  lives: 0
   _healthbar: {fileID: 946609492}
   _magicbar: {fileID: 45723276}
   gameOverScreen: {fileID: 1950527773}

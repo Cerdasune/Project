@@ -8,14 +8,15 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float _maxhealth = 10;
     [SerializeField] private float _currenthealth;
-    [SerializeField] private float _increaseHealth = 5;
+    [SerializeField] private float _healthIncrease = 2f;
     [SerializeField] private GameObject _deathEffect, _hitEffect;
-   
 
     [SerializeField] private float _magicplus = 10;
     private float _currentmagic = 0f;
 
     private float _currentScore = 0;
+
+    public int lives;
 
     [SerializeField] private HealthBar _healthbar;
     [SerializeField] private MagicBarScript _magicbar;
@@ -55,9 +56,20 @@ public class Player : MonoBehaviour
 
         if (_currenthealth <= 0)
         {
-           Instantiate(_deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
-           Destroy(gameObject);
-           gameOverScreen.SetActive(true);
+            if(lives > 0)
+            {
+                _currenthealth = 10f;
+                _healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
+                lives--;
+            }
+
+            else
+            {
+                Instantiate(_deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
+                Destroy(gameObject);
+                gameOverScreen.SetActive(true);
+            }
+
         }
 
         else
@@ -80,23 +92,27 @@ public class Player : MonoBehaviour
 
         if (other.gameObject.tag == "SpeedItem")
         {
-            _increaseHealth = _currenthealth + 5;
-            originalSpeed = maxSpeed;
+            GetComponent<PlayerController>().playerSpeed = GetComponent<PlayerController>().playerSpeed * 2f;
             gm.score = gm.score + 15;
             print("I got speed");
-           itemSound.Play();
+            itemSound.Play();
+            StartCoroutine("SpeedUp");
+            Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "HealthItem")
         {
             print("I got health");
+            _currenthealth += _healthIncrease;
+            _healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
             gm.score = gm.score + 20;
             itemSound.Play();
-            
+            Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "LifeItem")
         {
+            lives++;
             gm.score = gm.score+ 40;
             print("I got life");
             itemSound.Play();
@@ -117,15 +133,6 @@ public class Player : MonoBehaviour
     }
     */
 
-    public void HealthUp()
-    {
-        _increaseHealth = _currenthealth + 5;
-    }
-
-    public void SpeedUp()
-    {
-        originalSpeed = maxSpeed;
-    }
 
     public void NewLife()
     {
@@ -178,6 +185,10 @@ public class Player : MonoBehaviour
         heartsCollected++;
     }
 
- 
+    public IEnumerator SpeedUp()
+    {
+        yield return new WaitForSeconds(5f);
+        GetComponent<PlayerController>().playerSpeed = 20f;
+    }
 
 }

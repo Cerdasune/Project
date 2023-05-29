@@ -18,7 +18,6 @@ public class ItemScript : MonoBehaviour
 
         if (other.gameObject.name == "Player")
         {
-            other.gameObject.GetComponent<Player>().HealthUp();
             other.gameObject.GetComponent<Player>().Collectbread();
             print("leipä");
             Destroy(gameObject);
