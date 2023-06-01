@@ -39,6 +39,8 @@ public class Player : MonoBehaviour
 
     public AudioSource itemSound;
 
+    public GameObject Speedeffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -92,7 +94,7 @@ public class Player : MonoBehaviour
 
         if (other.gameObject.tag == "SpeedItem")
         {
-            GetComponent<PlayerController>().playerSpeed = GetComponent<PlayerController>().playerSpeed * 2f;
+            GetComponent<PlayerController>().playerSpeed = GetComponent<PlayerController>().playerSpeed * 1.5f;
             gm.score = gm.score + 15;
             print("I got speed");
             itemSound.Play();
@@ -140,13 +142,15 @@ public class Player : MonoBehaviour
     }
 
 
-    void Update()
+  
+   void Update()
     {
         caketext.text = "Cake " + cakesCollected;
         breadtext.text = "Bread " + breadsCollected;
         drinktext.text = "Drink " + drinksCollected;
         hearttext.text = "Heart " + heartsCollected;
     }
+  
 
     //Item collecting,catalog and using the item from the menu
 
@@ -185,9 +189,11 @@ public class Player : MonoBehaviour
         heartsCollected++;
     }
 
+
     public IEnumerator SpeedUp()
     {
-        yield return new WaitForSeconds(5f);
+        Instantiate(Speedeffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+        yield return new WaitForSeconds(10f);
         GetComponent<PlayerController>().playerSpeed = 20f;
     }
 

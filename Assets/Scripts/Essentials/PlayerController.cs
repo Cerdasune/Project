@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player movement")]
     [Range(0.1f, 30f)]
-    public float playerSpeed = 20f;
+    public float playerSpeed = 15f;
     public float hor;
     public float ver;
     // public float dep;
@@ -86,17 +86,17 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             Shootrapidly();
 
         }
 
-        if (Input.GetButton("Fire2"))
-        {
-            Shootlazer();
+        //if (Input.GetButton("Fire1"))
+      //  {
+       //     Shootlazer();
 
-        }
+      //  }
 
     }
 

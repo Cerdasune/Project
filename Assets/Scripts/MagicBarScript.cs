@@ -10,6 +10,7 @@ public class MagicBarScript : MonoBehaviour
 
     public GameObject Cakemagic;
     public GameObject Beam;
+    public Transform gun;
 
     private float _target = 0;
     private Camera _cam;
@@ -30,7 +31,9 @@ public class MagicBarScript : MonoBehaviour
 
         if(_target == 1)
         {
-            gameObject.GetComponent<PlayerController>().Shootlazer();
+            //gameObject.GetComponent<PlayerController>().Shootlazer();
+           Instantiate(Beam, gun.position, gun.rotation);
+            _target = 0;
         }
     }
 

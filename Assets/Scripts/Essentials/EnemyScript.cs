@@ -24,7 +24,7 @@ public class EnemyScript : MonoBehaviour
         transform.LookAt(target);
         //transform.Translate(Vector3.forward * enemySpeed * Time.deltaTime);
         //Instantiate(enemyBullet, transform.position, transform.rotation);
-        Destroy(gameObject, 10f);
+        Destroy(gameObject, 20f);
     }
 
     private void OnTriggerEnter(Collider other)

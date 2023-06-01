@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemScript : MonoBehaviour
 {
     public GameObject Player;
+    
    
 
     public void OnTriggerEnter(Collider other)
