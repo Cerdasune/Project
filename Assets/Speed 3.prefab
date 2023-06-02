@@ -222,8 +222,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.41171235, g: 0.7703677, b: 0.8490566, a: 1}
-      maxColor: {r: 0.21947306, g: 0.33462477, b: 0.8490566, a: 1}
+      minColor: {r: 0.44559765, g: 0.8867924, b: 0.39654678, a: 1}
+      maxColor: {r: 0.2652901, g: 0.8679245, b: 0.5968607, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4824,7 +4824,7 @@ GameObject:
   - component: {fileID: -607679864747941977}
   - component: {fileID: -5451138449014494223}
   m_Layer: 0
-  m_Name: Speed
+  m_Name: Speed 3
   m_TagString: SpeedItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5035,8 +5035,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.15795653, g: 0.7188955, b: 0.8207547, a: 1}
-      maxColor: {r: 0.9091147, g: 0.8862745, b: 0.94509804, a: 1}
+      minColor: {r: 0.43723744, g: 0.8679245, b: 0.4993985, a: 1}
+      maxColor: {r: 0.22054109, g: 0.6603774, b: 0.352461, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

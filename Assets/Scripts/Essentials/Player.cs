@@ -40,6 +40,10 @@ public class Player : MonoBehaviour
     public AudioSource itemSound;
 
     public GameObject Speedeffect;
+    public GameObject Lifeeffect;
+    public GameObject Magiceffect;
+    public GameObject Energyeffect;
+
 
     // Start is called before the first frame update
     void Start()
@@ -89,6 +93,7 @@ public class Player : MonoBehaviour
             _magicbar.UpdateMagicbar(_magicplus);
             gm.score = gm.score+ 10;
             print("I got magic");
+            StartCoroutine("MagicUp");
             itemSound.Play();
         }
 
@@ -108,6 +113,7 @@ public class Player : MonoBehaviour
             _currenthealth += _healthIncrease;
             _healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
             gm.score = gm.score + 20;
+            StartCoroutine("EnergyUp");
             itemSound.Play();
             Destroy(other.gameObject);
         }
@@ -117,6 +123,7 @@ public class Player : MonoBehaviour
             lives++;
             gm.score = gm.score+ 40;
             print("I got life");
+            StartCoroutine("LifeUp");
             itemSound.Play();
         }
 
@@ -195,6 +202,21 @@ public class Player : MonoBehaviour
         Instantiate(Speedeffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
         yield return new WaitForSeconds(10f);
         GetComponent<PlayerController>().playerSpeed = 20f;
+    }
+
+    public void LifeUp()
+    {
+        Instantiate(Lifeeffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+    }
+
+    public void MagicUp()
+    {
+        Instantiate(Magiceffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+    }
+
+    public void EnergyUp()
+    {
+        Instantiate(Energyeffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
     }
 
 }
