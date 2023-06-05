@@ -71,7 +71,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4365317067781366838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.186, z: 0}
+  m_LocalPosition: {x: 0, y: 0.311, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -121,7 +121,7 @@ Transform:
   m_GameObject: {fileID: 5989220978615838212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 41, y: 0.040732, z: -0.0021522045}
-  m_LocalScale: {x: 26.67978, y: 80, z: 8.9685}
+  m_LocalScale: {x: 26, y: 30, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5807041883093470160}
@@ -145,7 +145,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5989220978615838212}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -208,7 +208,6 @@ MonoBehaviour:
   enemyspawner:
   - {fileID: 4365317067781366838}
   - {fileID: 8129482360167655523}
-  - {fileID: 4100909411716446566}
   gm: {fileID: 0}
 --- !u!1 &8129482360167655523
 GameObject:
@@ -235,7 +234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8129482360167655523}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.32, y: -0.195, z: 0}
+  m_LocalPosition: {x: -0.043, y: -0.368, z: 0}
   m_LocalScale: {x: 0.03748157, y: 0.02340389, z: 0.111501366}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -254,5 +253,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a90a892e9a9a1f48b523f599dc35385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 0}
+  obstacle: {fileID: 7579503723464190727, guid: ba9941ee609ec2b47a44c3494722041b, type: 3}
   spawnTimer: 5

@@ -19,19 +19,25 @@ public class EnemyArea : MonoBehaviour
             for (int i =0;1 < enemyspawner.Length; i++)
             {
                 enemyspawner[i].SetActive(true);
-                
+                gm.SpawnEnemyFields();
+
+
             }
 
         }
     }
 
-    private void OnTriggerExit(Collider other)
+   /* private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
             gm.SpawnEnemyFields();
         }
     }
-
+*/
+    private void Update()
+    {
+        Destroy(gameObject, 40f);
+    }
 
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnerExample : MonoBehaviour
 {
     public GameObject obstacle;
-    public float spawnTimer = 5;
+    public float spawnTimer = 10;
     // Start is called before the first frame update
     void Start()
     {

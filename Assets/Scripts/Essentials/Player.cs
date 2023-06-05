@@ -23,9 +23,9 @@ public class Player : MonoBehaviour
     public GameObject gameOverScreen;
     public GameManager gm;
 
-    public float PlayerSpeed = 20f;
+    public float PlayerSpeed = 10f;
     public float originalSpeed;
-    public float maxSpeed = 50f;
+    public float maxSpeed = 15f;
 
     public int heartsCollected = 0;
     public int cakesCollected = 0;
@@ -48,7 +48,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerSpeed = originalSpeed;
+        originalSpeed = PlayerSpeed;
+        //PlayerSpeed = originalSpeed;
         _currenthealth = _maxhealth;
         //_healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
         _magicbar.UpdateMagicbar(_currentmagic);
@@ -201,7 +202,7 @@ public class Player : MonoBehaviour
     {
         Instantiate(Speedeffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
         yield return new WaitForSeconds(10f);
-        GetComponent<PlayerController>().playerSpeed = 20f;
+        GetComponent<PlayerController>().playerSpeed = 15f;
     }
 
     public void LifeUp()

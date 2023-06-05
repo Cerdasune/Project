@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
     public void SpawnEnemyFields()
     {
         int rnd = Random.Range(0,5);
-        Instantiate(enemyFields[rnd], new Vector3(player.transform.position.x+50, player.transform.position.y, player.transform.position.z), player.transform.rotation);
+        Instantiate(enemyFields[rnd], new Vector3(player.transform.position.x+60, player.transform.position.y, player.transform.position.z), player.transform.rotation);
     }
 
     public void ClearData() //doesn't do anything, since it needs Clear data-button to work.

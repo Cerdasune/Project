@@ -8,12 +8,12 @@ public class PlayerController : MonoBehaviour
     public bool twinstick = false;
     public bool mouseaim = false;
     public bool classic = false;
-   
-    
+
+
 
     [Header("Player movement")]
     [Range(0.1f, 30f)]
-    public float playerSpeed = 15f;
+    public float playerSpeed = 0f;
     public float hor;
     public float ver;
     // public float dep;
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
 
         if (hor == 0)
         {
-            transform.Translate(new Vector3( 1 * Time.deltaTime, ver * playerSpeed * Time.deltaTime, 0));
+            transform.Translate(new Vector3( 0 * Time.deltaTime, ver * playerSpeed * Time.deltaTime, 0));
 
         }
 

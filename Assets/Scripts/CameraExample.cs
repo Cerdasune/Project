@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraExample : MonoBehaviour
 {
     public Transform target;
-    public float delay = 1;
+    public float delay = 0;
 
     public Camera[] cameras;
     public GameObject[] postEffects;

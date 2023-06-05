@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public float speed = 2f;
+    public float speed = 15f;
     public float timer;
 
-    private GameObject player;
+    public GameObject target;
     public float xMin;
     public float xMax;
     public float yMin;
@@ -16,14 +16,14 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        target = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        float x = Mathf.Clamp(player.transform.position.x, xMin, xMax);
-        float y = Mathf.Clamp(player.transform.position.y, yMin, yMax);
+        float x = Mathf.Clamp(target.transform.position.x, xMin, xMax);
+        float y = Mathf.Clamp(target.transform.position.y, yMin, yMax);
         gameObject.transform.position = new Vector3(x, y, gameObject.transform.position.z);
 
         //transform.position = transform.position + Vector3.right * speed * Time.deltaTime;

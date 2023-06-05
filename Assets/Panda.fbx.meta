@@ -3,7 +3,27 @@ guid: b81386466608efe43820055be9fbb3d3
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Panda3_eyecolor
+    second: {fileID: 2100000, guid: b3c47a9a18816d448b3a19717112fd7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Panda3_lightspots
+    second: {fileID: 2100000, guid: 2eb970f21ab36d948b37f1e1a154def2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Panda3_panda_furcolor
+    second: {fileID: 2100000, guid: 9bf3d87605b1cf54988b79bf08c01db5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Panda3_panda_spots
+    second: {fileID: 2100000, guid: 403cb733819f0b943a14054413f94017, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
