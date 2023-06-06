@@ -5,6 +5,9 @@ using UnityEngine;
 public class EnemyArea : MonoBehaviour
 {
     public GameObject[] enemyspawner;
+
+    public int Level; 
+
     public GameManager gm;
 
     private void Start()
@@ -19,7 +22,19 @@ public class EnemyArea : MonoBehaviour
             for (int i =0;1 < enemyspawner.Length; i++)
             {
                 enemyspawner[i].SetActive(true);
-                gm.SpawnEnemyFields();
+
+                if(Level == 1)
+                {
+                    gm.SpawnEnemyFields();
+
+                }
+
+                else if(Level == 2)
+                {
+                    gm.SpawnEnemyFieldsLevel2();
+
+                }
+               
 
 
             }

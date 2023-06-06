@@ -3199,7 +3199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 6aa3d7ae9feed854dbc62f342bcd4811, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 9f22a9af697860047b9e02b63a15faaa, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 0.389
@@ -3740,6 +3740,7 @@ MonoBehaviour:
   - {fileID: 3450998133041229173, guid: dffc2b8926f084c4e82133584d5e3767, type: 3}
   - {fileID: 7444904385669253129, guid: f0be1a510afc327469d3153308749c9a, type: 3}
   - {fileID: 769087500}
+  enemyFields2: []
   player: {fileID: 1028250266}
   menuButton: {fileID: 1299840691}
   retryButton: {fileID: 1788909198}
@@ -4593,6 +4594,7 @@ MonoBehaviour:
   enemyspawner:
   - {fileID: 125642911}
   - {fileID: 821014709}
+  Level: 1
   gm: {fileID: 0}
 --- !u!65 &769087502
 BoxCollider:
@@ -4614,7 +4616,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769087500}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4665,8 +4667,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769087500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41, y: 0.040732, z: -0.0021522045}
-  m_LocalScale: {x: 26, y: 30, z: 8}
+  m_LocalPosition: {x: 41, y: 77.9, z: -0.0021522045}
+  m_LocalScale: {x: 26, y: 200, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 125642912}

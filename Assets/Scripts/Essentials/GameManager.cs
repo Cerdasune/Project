@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
     public AudioSource titleMusic;
 
     public GameObject[] enemyFields;
+
+    public GameObject[] enemyFields2;
+
     public GameObject player;
     public GameObject menuButton;
     public GameObject retryButton;
@@ -132,6 +135,12 @@ public class GameManager : MonoBehaviour
     {
         int rnd = Random.Range(0,5);
         Instantiate(enemyFields[rnd], new Vector3(player.transform.position.x+60, player.transform.position.y, player.transform.position.z), player.transform.rotation);
+    }
+
+    public void SpawnEnemyFieldsLevel2()
+    {
+        int rnd = Random.Range(0, 5);
+        Instantiate(enemyFields2[rnd], new Vector3(player.transform.position.x + 60, player.transform.position.y, player.transform.position.z), player.transform.rotation);
     }
 
     public void ClearData() //doesn't do anything, since it needs Clear data-button to work.

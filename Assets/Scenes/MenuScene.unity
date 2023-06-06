@@ -461,7 +461,15 @@ MonoBehaviour:
   hiScoreText: {fileID: 0}
   maxScore: 0
   titleMusic: {fileID: 1724490236}
-  enemyFields: []
+  enemyFields:
+  - {fileID: 3450998133041229173, guid: dffc2b8926f084c4e82133584d5e3767, type: 3}
+  - {fileID: 5989220978615838212, guid: 326566a9ab2048c448d6029be7a8d3f8, type: 3}
+  - {fileID: 7444904385669253129, guid: f0be1a510afc327469d3153308749c9a, type: 3}
+  - {fileID: 7444904385669253129, guid: f0be1a510afc327469d3153308749c9a, type: 3}
+  enemyFields2:
+  - {fileID: 3450998133041229173, guid: 10295cb8e3f978f448b86c34089b26cb, type: 3}
+  - {fileID: 3450998133041229173, guid: c1da8384f8790d443a08f05c8ae62b19, type: 3}
+  - {fileID: 3450998133041229173, guid: 36b630fc0a0c59946a85138641734176, type: 3}
   player: {fileID: 0}
   menuButton: {fileID: 0}
   retryButton: {fileID: 0}
