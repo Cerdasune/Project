@@ -15,6 +15,7 @@ TagManager:
   - LifeItem
   - StageWall
   - EnemySpawn
+  - Gold
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject Score;
     public GameObject youWin;
+    
 
     public TextMeshProUGUI hiScoreText;
 
@@ -166,10 +167,9 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void GameOver()
+    public void Win()
     {
-        
-
+        StartCoroutine(Loadlevel(4));    
     }
 
     public void QuitGame()

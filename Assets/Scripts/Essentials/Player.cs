@@ -133,6 +133,11 @@ public class Player : MonoBehaviour
             gm.StageClear();
             
         }
+
+        if(other.gameObject.tag == "Gold")
+        {
+            gm.Win();
+        }
            
     }
 
