@@ -19,7 +19,7 @@ public class EnemyArea : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            for (int i =0;1 < enemyspawner.Length; i++)
+            for (int i =0; i<enemyspawner.Length; i++)
             {
                 enemyspawner[i].SetActive(true);
 

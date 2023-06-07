@@ -22,10 +22,15 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        float x = Mathf.Clamp(target.transform.position.x, xMin, xMax);
-        float y = Mathf.Clamp(target.transform.position.y, yMin, yMax);
-        gameObject.transform.position = new Vector3(x, y, gameObject.transform.position.z);
+        if(target != null)
+        {
+            float x = Mathf.Clamp(target.transform.position.x, xMin, xMax);
+            float y = Mathf.Clamp(target.transform.position.y, yMin, yMax);
+            gameObject.transform.position = new Vector3(x, y, gameObject.transform.position.z);
 
-        //transform.position = transform.position + Vector3.right * speed * Time.deltaTime;
+            //transform.position = transform.position + Vector3.right * speed * Time.deltaTime;
+
+        }
+
     }
 }

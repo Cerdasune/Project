@@ -18,9 +18,14 @@ public class TreeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.transform.position.x > transform.position.x+ forwardDistance1)
+
+        if(player != null)
         {
-            transform.position = new Vector3(player.transform.position.x+ Random.Range(forwardDistance1, forwardDistance2), transform.position.y,transform.position.z);
+            if (player.transform.position.x > transform.position.x + forwardDistance1)
+            {
+                transform.position = new Vector3(player.transform.position.x + Random.Range(forwardDistance1, forwardDistance2), transform.position.y, transform.position.z);
+            }
         }
+
     }
 }

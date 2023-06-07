@@ -11,12 +11,12 @@ public class EelScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+        transform.rotation = Quaternion.Euler(0f, -90, 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(transform.right * speed * Time.deltaTime); 
+        transform.Translate(Vector3.forward * speed * Time.deltaTime); 
     }
 }

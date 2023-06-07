@@ -5,7 +5,6 @@ using UnityEngine;
 public class ItemScript : MonoBehaviour
 {
     public GameObject Player;
-    
    
 
     public void OnTriggerEnter(Collider other)
@@ -24,6 +23,7 @@ public class ItemScript : MonoBehaviour
             Destroy(gameObject);
         }
 
+        /*
         if (other.gameObject.name == "Player")
         {
             other.gameObject.GetComponent<Player>().SpeedUp();
@@ -31,6 +31,7 @@ public class ItemScript : MonoBehaviour
             print("juoma");
             Destroy(gameObject);
         }
+        */
 
         if (other.gameObject.name == "Player")
         {

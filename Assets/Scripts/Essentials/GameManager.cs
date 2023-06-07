@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemyFields2;
 
     public GameObject player;
+
+    public GameObject gameOverMenu;
     public GameObject menuButton;
     public GameObject retryButton;
    
@@ -62,7 +64,33 @@ public class GameManager : MonoBehaviour
  
     }
 
- 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        player = GameObject.Find("Player");
+        scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
+        Score = GameObject.Find("Score");
+        youWin = GameObject.Find("StageClear");
+        gameOverMenu = GameObject.Find("GameOver");
+        menuButton = GameObject.Find("ExitButton (1)");
+        retryButton = GameObject.Find("Retry");
+
+
+        fadescreen = GameObject.Find("FadeScreen").GetComponent<Animator>();
+        StartCoroutine("DisableMenu");
+
+    }
+
+    public IEnumerator DisableMenu()
+    {
+        yield return new WaitForSeconds(0.1f);
+        gameOverMenu.SetActive(false);
+    }
+
 
     //Scoresystem
 
@@ -134,13 +162,13 @@ public class GameManager : MonoBehaviour
 
     public void SpawnEnemyFields()
     {
-        int rnd = Random.Range(0,5);
+        int rnd = Random.Range(0,3);
         Instantiate(enemyFields[rnd], new Vector3(player.transform.position.x+60, player.transform.position.y, player.transform.position.z), player.transform.rotation);
     }
 
     public void SpawnEnemyFieldsLevel2()
     {
-        int rnd = Random.Range(0, 5);
+        int rnd = Random.Range(0, 2);
         Instantiate(enemyFields2[rnd], new Vector3(player.transform.position.x + 60, player.transform.position.y, player.transform.position.z), player.transform.rotation);
     }
 
