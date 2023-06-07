@@ -8,6 +8,8 @@ public class LookAtEnemyScript : MonoBehaviour
 
     public Transform Player;
 
+    public GameObject enemyEffect;
+
     public float visionAngle = 10f;
     public float visionDistance = 10f;
     public float moveSpeed = 10f;
@@ -40,6 +42,7 @@ public class LookAtEnemyScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<Player>().TakingHit();
+            Instantiate(enemyEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             Destroy(gameObject);
         }
     }

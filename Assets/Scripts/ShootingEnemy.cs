@@ -6,6 +6,7 @@ public class ShootingEnemy : MonoBehaviour
 {
     public Transform target;
     public GameObject enemybullet;
+    public GameObject enemyEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,7 @@ public class ShootingEnemy : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<Player>().TakingHit();
+            Instantiate(enemyEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             Destroy(gameObject);
         }
     }
