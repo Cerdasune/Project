@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore()
     {
-        scoreText.text = "Score 0" + score;
+        //scoreText.text = "Score 0" + score;
     }
 
     void Update()

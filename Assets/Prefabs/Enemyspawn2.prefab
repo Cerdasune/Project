@@ -162,7 +162,6 @@ MonoBehaviour:
   enemyspawner:
   - {fileID: 999927559402297440}
   - {fileID: 3986015359803859605}
-  - {fileID: 4987824831698187648}
   Level: 1
   gm: {fileID: 0}
 --- !u!1 &3986015359803859605

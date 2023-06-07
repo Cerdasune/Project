@@ -35,14 +35,14 @@ public class PauseScript : MonoBehaviour
         // Pauses the game and opens the menu
         if(paused == true)
         {
-            pauseMenu.SetActive(true);
+            //pauseMenu.SetActive(true);
             Time.timeScale = 0f;
           
         }
 
         else if(paused == false)
         {
-            pauseMenu.SetActive(false);
+            //pauseMenu.SetActive(false);
             Time.timeScale = 1f;
         }
     }
