@@ -5,10 +5,17 @@ using UnityEngine;
 public class EnemyArea : MonoBehaviour
 {
     public GameObject[] enemyspawner;
+    public GameObject[] enemyspawner2;
+    public GameObject[] enemyspawner3;
+
+    public GameObject[] enemyFields;
+    public GameObject[] enemyFields2;
 
     public int Level; 
 
     public GameManager gm;
+
+    public int enemyEncounters;
 
     private void Start()
     {
@@ -19,26 +26,26 @@ public class EnemyArea : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            for (int i =0; i<enemyspawner.Length; i++)
+            if(enemyEncounters < 3)
             {
-                enemyspawner[i].SetActive(true);
-
-                if(Level == 1)
+                for (int i = 0; i < enemyspawner.Length; i++)
                 {
-                    gm.SpawnEnemyFields();
+                    Instantiate(enemyFields[Random.Range(0, enemyFields.Length)], enemyspawner[i].transform.position, transform.rotation);
 
                 }
-
-                else if(Level == 2)
-                {
-                    gm.SpawnEnemyFieldsLevel2();
-
-                }
-               
-
-
             }
 
+            if (enemyEncounters >= 3)
+            {
+                for (int i = 0; i < enemyspawner2.Length; i++)
+                {
+                    Instantiate(enemyFields[Random.Range(0, enemyFields.Length)], enemyspawner2[i].transform.position, transform.rotation);
+
+                }
+            }
+
+            transform.position = new Vector3(transform.position.x + 60f, transform.position.y, transform.position.z);
+            enemyEncounters++;
         }
     }
 
@@ -52,7 +59,7 @@ public class EnemyArea : MonoBehaviour
 */
     private void Update()
     {
-        Destroy(gameObject, 40f);
+
     }
 
 }

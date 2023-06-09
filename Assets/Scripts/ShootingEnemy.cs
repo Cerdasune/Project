@@ -33,7 +33,7 @@ public class ShootingEnemy : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<Player>().TakingHit();
-            Instantiate(enemyEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            //Instantiate(enemyEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             Destroy(gameObject);
         }
     }

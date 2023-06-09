@@ -79,9 +79,10 @@ public class GameManager : MonoBehaviour
         menuButton = GameObject.Find("ExitButton (1)");
         retryButton = GameObject.Find("Retry");
 
-
+        youWin.SetActive(false);
         fadescreen = GameObject.Find("FadeScreen").GetComponent<Animator>();
-        StartCoroutine("DisableMenu");
+        gameOverMenu.SetActive(false);
+        //StartCoroutine("DisableMenu");
 
     }
 
@@ -155,9 +156,7 @@ public class GameManager : MonoBehaviour
             hiScoreText.text = "Hi Score" + hiScore.ToString();
             PlayerPrefs.SetInt("Hi Score", hiScore);
             PlayerPrefs.Save();
-
         }
-
     }
 
     public void SpawnEnemyFields()
