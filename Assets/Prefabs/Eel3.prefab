@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 2095152680696070927}
   - component: {fileID: 1916777788780946662}
   - component: {fileID: 1916777788780946681}
+  - component: {fileID: -347540319634197372}
   m_Layer: 0
   m_Name: Eel3
   m_TagString: Enemy
@@ -229,6 +230,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!95 &-347540319634197372
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610224813105256885}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0796b641c03acb44fabdfc58f1e6868b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1992992442764074055
 GameObject:
   m_ObjectHideFlags: 0

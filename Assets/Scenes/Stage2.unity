@@ -1317,7 +1317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.02745098, g: 0.19215687, b: 0.19215687, a: 1}
+  m_Color: {r: 0.105882354, g: 0.03529412, b: 0.22745098, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1842,8 +1842,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284390744
-  m_fontColor: {r: 0.34509805, g: 0.6156863, b: 0.36862746, a: 1}
+    rgba: 4289100912
+  m_fontColor: {r: 0.4392157, g: 0.4862745, b: 0.6509804, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3562,8 +3562,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281413895
-  m_fontColor: {r: 0.02745098, g: 0.19215687, b: 0.19215687, a: 1}
+    rgba: 4281993499
+  m_fontColor: {r: 0.105882354, g: 0.03529412, b: 0.22745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4587,9 +4587,9 @@ MonoBehaviour:
   timer: 0
   target: {fileID: 0}
   xMin: -2
-  xMax: 1200
+  xMax: 1500
   yMin: -20
-  yMax: 20
+  yMax: 50
 --- !u!1 &733554805
 GameObject:
   m_ObjectHideFlags: 0
@@ -6167,7 +6167,7 @@ MonoBehaviour:
   lives: 0
   _healthbar: {fileID: 946609492}
   _magicbar: {fileID: 45723276}
-  gameOverScreen: {fileID: 1950527773}
+  gameOverScreen: {fileID: 0}
   gm: {fileID: 618079044}
   PlayerSpeed: 12
   originalSpeed: 0
@@ -6197,9 +6197,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3892b16d8e6a0c64fbc624761b0d8225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  retrybutton: {fileID: 1679383447}
+  retrybutton: {fileID: 0}
   explosion: {fileID: 3077030611160169112, guid: 2594ae7910fda264db04cc6259223c10, type: 3}
-  backbutton: {fileID: 223050726}
+  backbutton: {fileID: 0}
   cameraAnim: {fileID: 0}
 --- !u!1 &1048785892
 GameObject:
@@ -6420,8 +6420,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285378162
-  m_fontColor: {r: 0.44705883, g: 0.68235296, b: 0.42745098, a: 1}
+    rgba: 4289100912
+  m_fontColor: {r: 0.4392157, g: 0.4862745, b: 0.6509804, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7028,7 +7028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 848918a99d11f25f110026ca44295342, type: 2}
-  m_Color: {r: 0.44705883, g: 0.68235296, b: 0.42745098, a: 1}
+  m_Color: {r: 0.34509805, g: 0.40392157, b: 0.6117647, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8151,7 +8151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.02745098, g: 0.19215687, b: 0.19215687, a: 1}
+  m_Color: {r: 0.105882354, g: 0.03529412, b: 0.22745098, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9919,8 +9919,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.007520514, y: 0.00854403, z: 0.0736141}
-  m_Center: {x: 1.2208899e-14, y: 0.0004505041, z: -0.00030498896}
+  m_Size: {x: 0.006525321, y: 0.008763567, z: 0.07103392}
+  m_Center: {x: -0.00004499798, y: 0.00035406215, z: 0.0037429864}
 --- !u!95 &3469287838049508591
 Animator:
   serializedVersion: 5
@@ -10080,15 +10080,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3295.9556
+      value: 4432.0713
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4072.1924
+      value: 5475.877
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalScale.z
-      value: 387.47626
+      value: 521.0393
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10096,11 +10096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.1
+      value: 7.4676
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6688
+      value: 0.75927
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalRotation.w
