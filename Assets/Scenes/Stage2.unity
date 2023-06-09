@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.289
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0045345714, g: 0.0025046559, b: 0.005023744, a: 0.289}
+  m_IndirectSpecularColor: {r: 0.0045348536, g: 0.0025040293, b: 0.005043604, a: 0.289}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -174,20 +174,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
---- !u!114 &8595824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8595819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 086fc2f63e239dd4abd1064bdc5e9864, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 4363015201590460722, guid: 4cfd687e236cd5d4daca5a6200547f0c, type: 3}
-  target: {fileID: 0}
 --- !u!1 &33105375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 32fd905b783691240bbd8136ae15665b, type: 3}
@@ -9933,8 +9919,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0075205127, y: 0.00854404, z: 0.011924283}
-  m_Center: {x: 0, y: 0.00045050433, z: 0.00096213946}
+  m_Size: {x: 0.007520514, y: 0.00854403, z: 0.0736141}
+  m_Center: {x: 1.2208899e-14, y: 0.0004505041, z: -0.00030498896}
 --- !u!95 &3469287838049508591
 Animator:
   serializedVersion: 5
@@ -10094,15 +10080,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2841.8425
+      value: 3295.9556
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3511.1304
+      value: 4072.1924
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalScale.z
-      value: 334.0902
+      value: 387.47626
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10110,11 +10096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.684
+      value: 8.1
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.7202
+      value: -1.6688
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalRotation.w
