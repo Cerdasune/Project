@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 9028428581710560969}
   - component: {fileID: 7021545433342877511}
   - component: {fileID: 344066934782961843}
-  - component: {fileID: 8260727911933662542}
   - component: {fileID: 8260727911933662541}
-  - component: {fileID: 3589664267408353116}
   m_Layer: 0
   m_Name: forwadenemy
   m_TagString: Enemy
@@ -87,22 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &8260727911933662542
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3247193037435386287}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &8260727911933662541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -116,26 +98,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9399319, y: 0.94435525, z: 1}
   m_Center: {x: 0.15408611, y: 0.09631789, z: 0}
---- !u!114 &3589664267408353116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3247193037435386287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb74b5868c6d4844e8851245af026fd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  enemyEffect: {fileID: 1890692789268914909, guid: a90623d765b981d4e91ef99b663944d4, type: 3}
-  visionAngle: 10
-  visionDistance: 10
-  moveSpeed: 10
-  chaseDistance: 10
-  speed: 5
-  timeToTurn: 3
 --- !u!1001 &5726696994345560257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,9 +105,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9028428581710560969}
     m_Modifications:
+    - target: {fileID: 5471414475170937436, guid: ba9941ee609ec2b47a44c3494722041b, type: 3}
+      propertyPath: enemyEffect
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7089825618269123005, guid: ba9941ee609ec2b47a44c3494722041b, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089825618269123005, guid: ba9941ee609ec2b47a44c3494722041b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089825618269123005, guid: ba9941ee609ec2b47a44c3494722041b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089825618269123005, guid: ba9941ee609ec2b47a44c3494722041b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 7089825618269123005, guid: ba9941ee609ec2b47a44c3494722041b, type: 3}
       propertyPath: m_LocalPosition.x

@@ -33,7 +33,7 @@ public class LookAtEnemyScript : MonoBehaviour
         Vector3 lookAt = Player.position;
         lookAt.y = transform.position.y;
         transform.LookAt(lookAt);
-        transform.position = transform.position + Vector3.right * speed * Time.deltaTime;
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBulletScript : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 10f;
 
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class EnemyBulletScript : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 7f);
     }
 
     private void OnTriggerEnter(Collider other)

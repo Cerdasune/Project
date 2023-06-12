@@ -2,30 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingEnemy : MonoBehaviour
+public class FastEnemyScript : MonoBehaviour
 {
     public Transform target;
-    public GameObject enemybullet;
-    //public GameObject enemyEffect;
+    public float enemySpeed = 30f;
+
 
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        InvokeRepeating("Shoot", 1f, 1f);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.LookAt(target);
-        Destroy(gameObject, 25f);
-    }
-
-    public void Shoot()
-    {
-        Instantiate(enemybullet, transform.position, transform.rotation);
-
+        transform.Translate(Vector3.forward * enemySpeed * Time.deltaTime);
+        Destroy(gameObject, 10f);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,8 +27,8 @@ public class ShootingEnemy : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<Player>().TakingHit();
-            //Instantiate(enemyEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             Destroy(gameObject);
         }
     }
 }
+

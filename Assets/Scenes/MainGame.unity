@@ -822,7 +822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 739822566055582053, guid: 2497887835b56e84489b479ece0d2191, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 739822566055582053, guid: 2497887835b56e84489b479ece0d2191, type: 3}
       propertyPath: m_LocalScale.x
@@ -3170,7 +3170,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &481624238
 MonoBehaviour:
@@ -3684,7 +3684,7 @@ MonoBehaviour:
   - {fileID: 2563953038522203318, guid: 5ab736c30ef55a04ca19af8714beb0f9, type: 3}
   - {fileID: 2563953038522203318, guid: 40c90d1dfd4c07247b30da5cecdb51a7, type: 3}
   player: {fileID: 1028250266}
-  gameOverMenu: {fileID: 0}
+  gameOverMenu: {fileID: 1950527773}
   menuButton: {fileID: 1299840691}
   retryButton: {fileID: 1788909198}
   fadescreen: {fileID: 1992425302}
@@ -5135,7 +5135,7 @@ RectTransform:
   - {fileID: 1508022798}
   - {fileID: 1452729869}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7055,8 +7055,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1468907428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 805, y: 0.040732, z: -0.0021522045}
-  m_LocalScale: {x: 92.2682, y: 1114.4125, z: 117.12281}
+  m_LocalPosition: {x: 671, y: 42.279, z: 0}
+  m_LocalScale: {x: 50, y: 376.47012, z: 123.76391}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -7364,7 +7364,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Bread = Life energy \n\nDrink = More speed for limited time\n\nCake =
-    Magic fill by half \n\nGolden Leaf = New Life\n\n\n\n"
+    Magic fill by half \n\nBlue leaf = Second chance\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a9ba48fc3e9ac945b6262642a5f2d6d, type: 2}
   m_sharedMaterial: {fileID: 7430908616245896078, guid: 6a9ba48fc3e9ac945b6262642a5f2d6d, type: 2}
@@ -7454,7 +7454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 739822566055582053, guid: 2497887835b56e84489b479ece0d2191, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 739822566055582053, guid: 2497887835b56e84489b479ece0d2191, type: 3}
       propertyPath: m_LocalScale.x
@@ -8190,7 +8190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 739822566055582053, guid: 2497887835b56e84489b479ece0d2191, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 739822566055582053, guid: 2497887835b56e84489b479ece0d2191, type: 3}
       propertyPath: m_LocalScale.y
@@ -8498,7 +8498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1950527774
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8516,7 +8516,7 @@ RectTransform:
   - {fileID: 577127079}
   - {fileID: 223050727}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9535,9 +9535,13 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4000337600656910952, guid: 35f467de47b23df4bab6c2995dedd8f7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000337600656910954, guid: 35f467de47b23df4bab6c2995dedd8f7, type: 3}
       propertyPath: enemyFields.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4000337600656910954, guid: 35f467de47b23df4bab6c2995dedd8f7, type: 3}
       propertyPath: enemyspawner.Array.size
@@ -9550,19 +9554,23 @@ PrefabInstance:
     - target: {fileID: 4000337600656910954, guid: 35f467de47b23df4bab6c2995dedd8f7, type: 3}
       propertyPath: enemyFields.Array.data[0]
       value: 
-      objectReference: {fileID: 7579503723464190727, guid: ba9941ee609ec2b47a44c3494722041b, type: 3}
+      objectReference: {fileID: 4444229655121970550, guid: e065cb452067a8544aee32a9b8a37e8f, type: 3}
     - target: {fileID: 4000337600656910954, guid: 35f467de47b23df4bab6c2995dedd8f7, type: 3}
       propertyPath: enemyFields.Array.data[1]
       value: 
-      objectReference: {fileID: 4444229655121970550, guid: e065cb452067a8544aee32a9b8a37e8f, type: 3}
+      objectReference: {fileID: 7579503723464190727, guid: ba9941ee609ec2b47a44c3494722041b, type: 3}
     - target: {fileID: 4000337600656910954, guid: 35f467de47b23df4bab6c2995dedd8f7, type: 3}
       propertyPath: enemyFields.Array.data[2]
       value: 
-      objectReference: {fileID: 4444229655121970550, guid: e065cb452067a8544aee32a9b8a37e8f, type: 3}
+      objectReference: {fileID: 7579503723464190727, guid: ba9941ee609ec2b47a44c3494722041b, type: 3}
     - target: {fileID: 4000337600656910954, guid: 35f467de47b23df4bab6c2995dedd8f7, type: 3}
       propertyPath: enemyFields.Array.data[3]
       value: 
-      objectReference: {fileID: 7579503723464190727, guid: ba9941ee609ec2b47a44c3494722041b, type: 3}
+      objectReference: {fileID: 4444229655121970550, guid: ea5016224f9e5db4a9e8f7c58a140a14, type: 3}
+    - target: {fileID: 4000337600656910954, guid: 35f467de47b23df4bab6c2995dedd8f7, type: 3}
+      propertyPath: enemyFields.Array.data[4]
+      value: 
+      objectReference: {fileID: 4444229655121970550, guid: ea5016224f9e5db4a9e8f7c58a140a14, type: 3}
     - target: {fileID: 4000337600656910954, guid: 35f467de47b23df4bab6c2995dedd8f7, type: 3}
       propertyPath: enemyspawner.Array.data[2]
       value: 

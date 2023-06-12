@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a90a892e9a9a1f48b523f599dc35385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 7579503723464190727, guid: ba9941ee609ec2b47a44c3494722041b, type: 3}
+  obstacle: {fileID: 4444229655121970550, guid: ea5016224f9e5db4a9e8f7c58a140a14, type: 3}
   spawnTimer: 5
 --- !u!1 &5823626298356480885
 GameObject:
@@ -207,5 +207,10 @@ MonoBehaviour:
   enemyspawner:
   - {fileID: 5823626298356480885}
   - {fileID: 5130270124385193188}
+  enemyspawner2: []
+  enemyspawner3: []
+  enemyFields: []
+  enemyFields2: []
   Level: 1
   gm: {fileID: 0}
+  enemyEncounters: 0

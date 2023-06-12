@@ -181,21 +181,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'In the enchanted forest, there lives two Panda sister mages in training.
-    The younger one has devoted her life to research every healing properties from
-    the nature while the older sister is more interested in offensive magic.
+  m_text: 'In the enchanted forest, there lives two panda mages in training. The
+    younger one has devoted her life to research every healing properties from the
+    nature while the older sister was more interested in offensive magic.
 
 
     One
     day the sisters travelled to the mystical forest. While studying native herbs,
-    the younger sister accidentally touched the poisonous vines. The sisters leave
-    the forest immediately. The older sister asked for help from their mentor who
-    told her about the golden leaf that resides deep in the damaged and flooded island.
+    the younger sister accidentally touched the poisonous vines. When the sisters
+    returned home, the older sister asked their mentor about the cure. She told her
+    about the golden leaf that resides deep in the flooded island.
 
 
-    In
-    order to save her sister from the poison, Trizzly, the mage has set foot in the
-    dangerous and barren land...'
+    In order
+    to save her sister from the poison, Trizzly, the mage has set foot in the dangerous
+    and barren land...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a9ba48fc3e9ac945b6262642a5f2d6d, type: 2}
   m_sharedMaterial: {fileID: 7430908616245896078, guid: 6a9ba48fc3e9ac945b6262642a5f2d6d, type: 2}
