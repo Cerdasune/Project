@@ -48,12 +48,18 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(gm == null)
+        {
+            gm = GameObject.Find("GM").GetComponent<GameManager>();
+
+        }
         originalSpeed = PlayerSpeed;
         //PlayerSpeed = originalSpeed;
         _currenthealth = _maxhealth;
         //_healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
         _magicbar.UpdateMagicbar(_currentmagic);
         _currentScore = 0;
+
     }
 
     // Update is called once per frame

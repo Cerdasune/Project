@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     {
        score = 0;
        hiScore = PlayerPrefs.GetInt("HiScore");
-       hiScoreText.text = "Hi Score" + hiScore.ToString();
+       //hiScoreText.text = "Hi Score" + hiScore.ToString();
 
         if (gameManager == null)
         {
@@ -71,8 +71,11 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+    
         player = GameObject.Find("Player");
+        player.GetComponent<Player>().gm = gameObject.GetComponent<GameManager>();
         scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
+        print("Score set");
         Score = GameObject.Find("Score");
         youWin = GameObject.Find("StageClear");
         gameOverMenu = GameObject.Find("GameOver");
@@ -153,7 +156,7 @@ public class GameManager : MonoBehaviour
         if(score > hiScore)
         {
             hiScore = score;
-            hiScoreText.text = "Hi Score" + hiScore.ToString();
+            //hiScoreText.text = "Hi Score" + hiScore.ToString();
             PlayerPrefs.SetInt("Hi Score", hiScore);
             PlayerPrefs.Save();
         }
@@ -175,7 +178,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("HiScore", 0);
         hiScore = PlayerPrefs.GetInt("HiScore");
-        hiScoreText.text = "Hi Score" + hiScore.ToString();
+       // hiScoreText.text = "Hi Score" + hiScore.ToString();
         PlayerPrefs.Save();
 
     }
