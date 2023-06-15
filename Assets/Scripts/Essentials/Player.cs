@@ -48,11 +48,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(gm == null)
-        {
-            gm = GameObject.Find("GM").GetComponent<GameManager>();
-
-        }
+  
+        gm = GameObject.Find("GM").GetComponent<GameManager>();
         originalSpeed = PlayerSpeed;
         //PlayerSpeed = originalSpeed;
         _currenthealth = _maxhealth;
@@ -99,6 +96,7 @@ public class Player : MonoBehaviour
         {
             _magicbar.UpdateMagicbar(_magicplus);
             gm.score = gm.score+ 10;
+            GameObject.Find("LevelScore").GetComponent<LevelScoreScript>().levelScore += 10;
             print("I got magic");
             StartCoroutine("MagicUp");
             itemSound.Play();
@@ -108,6 +106,7 @@ public class Player : MonoBehaviour
         {
             GetComponent<PlayerController>().playerSpeed = GetComponent<PlayerController>().playerSpeed * 1.5f;
             gm.score = gm.score + 15;
+            GameObject.Find("LevelScore").GetComponent<LevelScoreScript>().levelScore += 15;
             print("I got speed");
             itemSound.Play();
             StartCoroutine("SpeedUp");
@@ -120,6 +119,7 @@ public class Player : MonoBehaviour
             _currenthealth += _healthIncrease;
             _healthbar.UpdateHealthBar(_maxhealth, _currenthealth);
             gm.score = gm.score + 20;
+            GameObject.Find("LevelScore").GetComponent<LevelScoreScript>().levelScore += 20;
             StartCoroutine("EnergyUp");
             itemSound.Play();
             Destroy(other.gameObject);
@@ -129,6 +129,7 @@ public class Player : MonoBehaviour
         {
             lives++;
             gm.score = gm.score+ 40;
+            GameObject.Find("LevelScore").GetComponent<LevelScoreScript>().levelScore += 40;
             print("I got life");
             StartCoroutine("LifeUp");
             itemSound.Play();

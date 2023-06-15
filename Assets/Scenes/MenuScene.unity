@@ -375,7 +375,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 199277076}
+      - m_Target: {fileID: 2128788180}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -425,73 +425,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157206482}
   m_CullTransparentMesh: 1
---- !u!1 &199277075
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 199277077}
-  - component: {fileID: 199277076}
-  m_Layer: 0
-  m_Name: GM
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &199277076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199277075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a25cd4868141044b92f81ff0738ff51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  score: 0
-  Score: {fileID: 0}
-  youWin: {fileID: 0}
-  hiScoreText: {fileID: 0}
-  maxScore: 0
-  titleMusic: {fileID: 1724490236}
-  enemyFields:
-  - {fileID: 3450998133041229173, guid: dffc2b8926f084c4e82133584d5e3767, type: 3}
-  - {fileID: 5989220978615838212, guid: 326566a9ab2048c448d6029be7a8d3f8, type: 3}
-  - {fileID: 7444904385669253129, guid: f0be1a510afc327469d3153308749c9a, type: 3}
-  - {fileID: 4000337600656910955, guid: 35f467de47b23df4bab6c2995dedd8f7, type: 3}
-  enemyFields2:
-  - {fileID: 3450998133041229173, guid: 10295cb8e3f978f448b86c34089b26cb, type: 3}
-  - {fileID: 3450998133041229173, guid: c1da8384f8790d443a08f05c8ae62b19, type: 3}
-  - {fileID: 3450998133041229173, guid: 36b630fc0a0c59946a85138641734176, type: 3}
-  player: {fileID: 0}
-  gameOverMenu: {fileID: 0}
-  menuButton: {fileID: 0}
-  retryButton: {fileID: 0}
-  fadescreen: {fileID: 0}
-  transitionTime: 3
-  winWall: {fileID: 0}
---- !u!4 &199277077
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199277075}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &340100507
 GameObject:
   m_ObjectHideFlags: 0
@@ -5173,6 +5106,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2128788179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2128788183}
+  - component: {fileID: 2128788180}
+  - component: {fileID: 2128788182}
+  - component: {fileID: 2128788181}
+  m_Layer: 0
+  m_Name: GM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2128788180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128788179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a25cd4868141044b92f81ff0738ff51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  score: 0
+  levelScore: 0
+  levelscoreScript: {fileID: 0}
+  Score: {fileID: 0}
+  youWin: {fileID: 0}
+  hiScoreText: {fileID: 0}
+  maxScore: 120
+  titleMusic: {fileID: 0}
+  enemyFields:
+  - {fileID: 5989220978615838212, guid: 326566a9ab2048c448d6029be7a8d3f8, type: 3}
+  - {fileID: 3450998133041229173, guid: dffc2b8926f084c4e82133584d5e3767, type: 3}
+  - {fileID: 7444904385669253129, guid: f0be1a510afc327469d3153308749c9a, type: 3}
+  - {fileID: 4000337600656910955, guid: 35f467de47b23df4bab6c2995dedd8f7, type: 3}
+  enemyFields2:
+  - {fileID: 2563953038522203318, guid: ba96245f8c3d5ca4eb1c507b1c93113c, type: 3}
+  - {fileID: 2563953038522203318, guid: 5ab736c30ef55a04ca19af8714beb0f9, type: 3}
+  - {fileID: 2563953038522203318, guid: 40c90d1dfd4c07247b30da5cecdb51a7, type: 3}
+  player: {fileID: 0}
+  gameOverMenu: {fileID: 0}
+  menuButton: {fileID: 0}
+  retryButton: {fileID: 0}
+  fadescreen: {fileID: 0}
+  transitionTime: 3
+  winWall: {fileID: 0}
+--- !u!114 &2128788181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128788179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec6b2e2dab73b644a970f43671ab9ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 2128788180}
+--- !u!114 &2128788182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128788179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828641abddf4c174aa1af2d4aba1ef8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIAnimator: {fileID: 0}
+--- !u!4 &2128788183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128788179}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2141666407
 GameObject:

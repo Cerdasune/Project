@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public int score = 0;
 
+    public int levelScore;
+
+    public LevelScoreScript levelscoreScript;
+
     public GameObject Score;
     public GameObject youWin;
     
@@ -49,7 +53,7 @@ public class GameManager : MonoBehaviour
     {
        score = 0;
        hiScore = PlayerPrefs.GetInt("HiScore");
-       //hiScoreText.text = "Hi Score" + hiScore.ToString();
+       hiScoreText.text = "Hi Score" + hiScore.ToString();
 
         if (gameManager == null)
         {
@@ -71,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-    
+        levelscoreScript = GameObject.Find("LevelScore").GetComponent<LevelScoreScript>();
         player = GameObject.Find("Player");
         player.GetComponent<Player>().gm = gameObject.GetComponent<GameManager>();
         scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
@@ -106,7 +110,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore()
     {
-        scoreText.text = "Score 0" + score;
+        scoreText.text = "Score 0" + levelscoreScript.levelScore;
     }
 
     void Update()

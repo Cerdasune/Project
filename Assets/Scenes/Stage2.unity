@@ -2212,7 +2212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &328477524
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3900,6 +3900,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 238638873}
   score: 0
+  levelScore: 0
+  levelscoreScript: {fileID: 0}
   Score: {fileID: 238638871}
   youWin: {fileID: 328477523}
   hiScoreText: {fileID: 733554807}
@@ -5892,6 +5894,51 @@ MonoBehaviour:
   player: {fileID: 0}
   forwardDistance1: 50
   forwardDistance2: 75
+--- !u!1 &978722283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 978722285}
+  - component: {fileID: 978722284}
+  m_Layer: 0
+  m_Name: LevelScore
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &978722284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978722283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e016c7a5729d92743a85c9b1dbe8f747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelScore: 0
+--- !u!4 &978722285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978722283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 655.2647, y: 8.192835, z: 0.640049}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &981120406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8118,14 +8165,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 618079044}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: retry
-        m_Mode: 1
+      - m_Target: {fileID: 963194230}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: ChangeLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
