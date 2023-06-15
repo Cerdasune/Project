@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public float speed = 15f;
+    public float speed = 10f;
     public float timer;
 
     public GameObject target;

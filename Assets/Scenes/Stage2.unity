@@ -2363,7 +2363,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7e7cfefe75c87a74f86741f831476580, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.12
+  m_Volume: 0.073
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3901,7 +3901,7 @@ MonoBehaviour:
   scoreText: {fileID: 238638873}
   score: 0
   levelScore: 0
-  levelscoreScript: {fileID: 0}
+  levelscoreScript: {fileID: 978722284}
   Score: {fileID: 238638871}
   youWin: {fileID: 328477523}
   hiScoreText: {fileID: 733554807}
@@ -3915,7 +3915,7 @@ MonoBehaviour:
   player: {fileID: 1028250266}
   gameOverMenu: {fileID: 1950527773}
   menuButton: {fileID: 1299840691}
-  retryButton: {fileID: 1788909198}
+  retryButton: {fileID: 1679383447}
   fadescreen: {fileID: 1992425302}
   transitionTime: 3
   winWall: {fileID: 0}
@@ -4589,7 +4589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55bec09d9c1b7cf4ea4d0c91e32fc307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 10
   timer: 0
   target: {fileID: 0}
   xMin: -2
@@ -6220,9 +6220,9 @@ MonoBehaviour:
   _magicbar: {fileID: 45723276}
   gameOverScreen: {fileID: 1950527773}
   gm: {fileID: 618079044}
-  PlayerSpeed: 12
+  PlayerSpeed: 15
   originalSpeed: 0
-  maxSpeed: 15
+  maxSpeed: 20
   heartsCollected: 0
   cakesCollected: 0
   drinksCollected: 0
@@ -10147,7 +10147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6255196143431363015, guid: 5131b40216cbb4c4dae2db0eb26b5213, type: 3}
       propertyPath: m_LocalPosition.z

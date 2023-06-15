@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
 
     public void Scorecounterinscreen()
     {
-       // score += 10;
+       //score += 10;
        //hiScoreText.text = "Score" + score.ToString();
 
         if(score > hiScore)

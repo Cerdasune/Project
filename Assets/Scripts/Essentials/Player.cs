@@ -23,9 +23,9 @@ public class Player : MonoBehaviour
     public GameObject gameOverScreen;
     public GameManager gm;
 
-    public float PlayerSpeed = 10f;
+    public float PlayerSpeed = 5f;
     public float originalSpeed;
-    public float maxSpeed = 15f;
+    public float maxSpeed = 10f;
 
     public int heartsCollected = 0;
     public int cakesCollected = 0;
