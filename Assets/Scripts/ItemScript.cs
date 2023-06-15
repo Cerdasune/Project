@@ -23,15 +23,7 @@ public class ItemScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        /*
-        if (other.gameObject.name == "Player")
-        {
-            other.gameObject.GetComponent<Player>().SpeedUp();
-            other.gameObject.GetComponent<Player>().Collectdrink();
-            print("juoma");
-            Destroy(gameObject);
-        }
-        */
+     
 
         if (other.gameObject.name == "Player")
         {

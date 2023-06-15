@@ -1976,8 +1976,8 @@ RectTransform:
   m_LocalScale: {x: 0.6391785, y: 0.6391786, z: 0.6391786}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 1299840692}
   - {fileID: 1788909199}
+  - {fileID: 1299840692}
   m_Father: {fileID: 1634562877}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6397,7 +6397,7 @@ GameObject:
   - component: {fileID: 1299840694}
   - component: {fileID: 1299840693}
   m_Layer: 5
-  m_Name: ExitButton (1)
+  m_Name: Back to menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6417,7 +6417,7 @@ RectTransform:
   m_Children:
   - {fileID: 690058835}
   m_Father: {fileID: 328477524}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -8103,7 +8103,7 @@ GameObject:
   - component: {fileID: 1788909201}
   - component: {fileID: 1788909200}
   m_Layer: 5
-  m_Name: Retrybutton
+  m_Name: To stage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8123,7 +8123,7 @@ RectTransform:
   m_Children:
   - {fileID: 1188527698}
   m_Father: {fileID: 328477524}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
