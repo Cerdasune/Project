@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager gameManager;
 
-    public GameObject winWall;
+ 
 
    
 
@@ -51,8 +51,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start() 
     {
-       score = 0;
-       hiScore = PlayerPrefs.GetInt("HiScore");
+       
        //hiScoreText.text = "Hi Score" + hiScore.ToString();
 
         if (gameManager == null)
@@ -65,9 +64,12 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
- 
-    }
+       
 
+        score = 0;
+        hiScore = PlayerPrefs.GetInt("HiScore");
+    }
+    
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -89,7 +91,7 @@ public class GameManager : MonoBehaviour
         youWin.SetActive(false);
         fadescreen = GameObject.Find("FadeScreen").GetComponent<Animator>();
         gameOverMenu.SetActive(false);
-      
+       
     }
 
     public IEnumerator DisableMenu()

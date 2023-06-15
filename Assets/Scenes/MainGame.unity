@@ -3688,10 +3688,9 @@ MonoBehaviour:
   player: {fileID: 1028250266}
   gameOverMenu: {fileID: 1950527773}
   menuButton: {fileID: 1299840691}
-  retryButton: {fileID: 1788909198}
+  retryButton: {fileID: 1679383447}
   fadescreen: {fileID: 1992425302}
   transitionTime: 3
-  winWall: {fileID: 0}
 --- !u!4 &618079045
 Transform:
   m_ObjectHideFlags: 0
