@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     void Start() 
     {
        score = 0;
-       //hiScore = PlayerPrefs.GetInt("HiScore");
+       hiScore = PlayerPrefs.GetInt("HiScore");
        //hiScoreText.text = "Hi Score" + hiScore.ToString();
 
         if (gameManager == null)
@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
 
     public void Scorecounterinscreen()
     {
-        //score += 10;
+       // score += 10;
        //hiScoreText.text = "Score" + score.ToString();
 
         if(score > hiScore)
