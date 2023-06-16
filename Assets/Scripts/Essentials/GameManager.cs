@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
        
        //hiScoreText.text = "Hi Score" + hiScore.ToString();
 
-        if (gameManager == null)
+       /* if (gameManager == null)
         {
             DontDestroyOnLoad(gameObject);
             gameManager = this;
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
        
-
+       */
         score = 0;
         hiScore = PlayerPrefs.GetInt("HiScore");
     }
