@@ -52,13 +52,14 @@ public class SceneManagerScript : MonoBehaviour
 
     public void Openpause()
     {
-        pauseMenu.SetActive(true);
+        Time.timeScale = 1f;
 
     }
 
     public void Inventory()
     { 
         InventoryMenu.SetActive(true);
+        Time.timeScale = 0f;
         paused = true;
         
     }
@@ -67,6 +68,7 @@ public class SceneManagerScript : MonoBehaviour
     {
         Time.timeScale = 0f;
         UIAnimator.SetTrigger("Open");
+        InventoryMenu.SetActive(true);
 
     }
 
@@ -76,6 +78,7 @@ public class SceneManagerScript : MonoBehaviour
         pauseMenu.SetActive(false);
         InventoryMenu.SetActive(false);
         UIAnimator.SetTrigger("Close");
+        Time.timeScale = 1f;
         paused = false; 
     }
 

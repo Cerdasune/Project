@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float _maxhealth = 10;
     [SerializeField] private float _currenthealth;
-    [SerializeField] private float _healthIncrease = 2f;
+    [SerializeField] private float _healthIncrease = 5f;
     [SerializeField] private GameObject _deathEffect, _hitEffect;
 
     [SerializeField] private float _magicplus = 10;
@@ -165,10 +165,10 @@ public class Player : MonoBehaviour
   
    void Update()
     {
-        caketext.text = "Cake " + cakesCollected;
-        breadtext.text = "Bread " + breadsCollected;
-        drinktext.text = "Drink " + drinksCollected;
-        hearttext.text = "Heart " + heartsCollected;
+       // caketext.text = "Cake " + cakesCollected;
+       // breadtext.text = "Bread " + breadsCollected;
+       // drinktext.text = "Drink " + drinksCollected;
+       // hearttext.text = "Heart " + heartsCollected;
     }
   
 
